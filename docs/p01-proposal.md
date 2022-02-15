@@ -1,9 +1,22 @@
+<<<<<<< HEAD
 # Title of your Project: Project Proposal
 test
 **TODO**: Edit this file. Your project proposal goes here. Save and delete the developer notes when done.
+=======
+# Vaccine Effectiveness Project Proposal
 
-## Developer Notes
+**Project Title:** The Impact of Vaccines
+Code name: Project Vax
+Winter 2022
+>>>>>>> clone
 
+**Authors:**
+Emma Bacarra - ebacarra@uw.edu
+Jayden Set - jset@uw.edu
+Larry Nguyen - nguyenla@uw.edu
+Parker - parker10@uw.edu
+
+<<<<<<< HEAD
 * **Where is the project brief?**  [`../instructions/project-design-brief.pdf`](../instructions/project-design-brief.pdf).
 * **Making Progress**: We understand this work might be difficult. Also, we understand that your project ideas might not be completely worked out. So, we ask that you do the best you can. You will receive specific guidance from your TA and constructive feedback. We are confident that you will succeed!
 * **What should be included in the proposal?** Every proposal will be different. It depends on your particular project.  That said, in the table below you will find the expected report elements.  It is important that you engage with and respond to the the Design Brief.
@@ -30,3 +43,49 @@ test
 |Acknowledgements | Is there anyone you would like to thank? A librarian who helped you with your research? A Teaching Assistant? A friend who helped you find your data? Say thank you in this section.|
 |References | Include citations to your three references. See 2.0 Introduction. If you like, you can cite more than three references.  Please use a standard citation style of your choice.  See [Citing Sources](https://guides.lib.uw.edu/research/citations) at the UW Library. |
 |Appendix A: Questions| Do you have questions for your TA or instructor?  Include them here.|
+=======
+**Affiliation:** INFO-201: Technical Foundations of Informatics - The Information School - University of Washington
+
+<hr />
+### Abstract
+Our main question is how vaccines can create an impact on public health in the U.S. This question is important because vaccinations can lower an individual’s risk for getting or spreading the virus, prevent severe symptoms, illness, and death, and initiates an antibody response in the immune system. To address the question, we will compare vaccination rates to the mortality rate and the total number of cases.
+
+### Keywords
+Vaccinations, spread prevention, public health, and mortality rate.
+
+### 1.0 Introduction
+Project Vax describes the impact of vaccinations on public health through datasets gathered from (datasets).
+
+The dataset(s) we are analyzing shows us the rate of vaccinations throughout the world and the mortality rate among those vaccinated and unvaccinated due to COVID-19. Our group was interested in exploring the effectiveness the COVID-19 vaccines have on the public health  whether the statistics support or oppose the use of the COVID-19 vaccines in the fight against the virus and its variants. The outbreak of the COVID-19 pandemic has greatly disrupted modern life for the past few years these vaccines can be the key to normality in the near future.
+
+The dataset(s) we are analyzing shows us the rate of vaccinations throughout the world and the mortality rate among those vaccinated and unvaccinated due to COVID-19. Our group was interested in exploring the effectiveness the COVID-19 vaccines have on public health  whether the statistics support or oppose the use of the COVID-19 vaccines in the fight against the virus and its variants. The outbreak of the COVID-19 pandemic has greatly disrupted modern life for the past few years. These vaccines can be the key to normality in the near future.
+
+### 2.0 Design Situation
+Our team's topic of concern revolves around COVID-19 and its relationship concerning vaccinated people, unvaccinated people, and how these traits have a role in the mortality rate that has surged since the pandemic has started. The concern among vaccinations stems from the human values of mutual empathy and love for your common man. The pandemic has greatly impacted our lives individually and we as individuals may have selfish reasons to end the global pandemic; the most common reason the general public pushes for a higher vaccination rate is because of herd immunity. In order to protect those vulnerable and unable to be vaccinated, we strive to get every abled body vaccinated. The direct stakeholders, those who will directly interact with **Project Vax** are policy makers, world leaders, researchers, and educators who may pass on the information presented in order to educate individuals and enact laws and policies that allow easier access to vaccinations and the science behind them and their effectiveness. Their medical advising directly affects the success or failure to the response of the pandemic. The indirect stakeholders are those who did not directly interact with the project firsthand but can feel the effects from those who did. Indirect stakeholders may include the general public who are subject to laws and regulations placed upon them by policy makers and government officials who have directly interacted with **Project Vax**. They may also include individuals who are at risk of contracting COVID-19 and unable to vaccinate themselves due to preexisting conditions or individuals who refuse to be vaccinated and are being educated by those who are. An example of how risky avoiding the COVID-19 vaccine can be seen in Israel, where 12% of Israels over 60 are unvaccinated and they account for 43% of deaths in their age group (haaretz, 2022). Lastly, these may include essential workers who are subject to regulations that may require them to be vaccinated or risk losing their jobs. Essential workers are put at risk of exposure and close contact in their jobs everyday, and are in even more danger if the individuals they interact with are not doing their part to be cautious. The harms of **Project Vax**  are the limitations of the existing data and its accuracy, the information can be biased to service political motivations that are promptly against vaccines. However, the benefits of our project heavily outweigh the harms. With the information present in **Project Vax**; national, state and local governments are better able to assess the situation of the global pandemic and enact policies and regulations accordingly. The hope is for representatives in the United States’ lowest vaccinated states to enact change as deaths from the virus are highest among low vaccinated states (NBCNews, 2022). This can also include the expansion of free or affordable COVID-19 vaccines that are made accessible to the general public.
+
+### 3.0 Research Questions
+Our teams questions:
+
+How much of an impact do vaccines create on public health in the U.S.?
+Have vaccinations helped the mortality rate of COVID-19 go down?
+Are a majority of the population in countries fully vaxxed?
+As the amount of new deaths were rising, were more people willing to get vaccinated?
+
+These questions are important because they are focused and aimed to find the positives that come with becoming vaccinated in order to prevent COVID-19’s death toll from continuing to go up. With these questions, we want to be able to find the positives of being vaccinated and prove that it is something that could eventually take down the virus. We also would like to shed light on how the vaccination actually works and could prevent death, doing this we could potentially motivate people to go get vaccinated in order to combat the virus. We will address these questions by using our [dataset on vaccination vs death](https://www.kaggle.com/sinakaraji/covid-vaccination-vs-death) . By doing so we could look at all countries across the globe and view content such as how many people have been fully vaccinated and the ratio comparing the total population to the number of people who have got vaccinated.
+
+### 4.0 The Dataset
+The dataset we have chosen to use for our project _The Impact of Vaccines_, compares the [covid-19 vaccination rate vs the mortality rate across the world](https://www.kaggle.com/sinakaraji/covid-vaccination-vs-death). This set of data has 15,803 views, 2,758 downloads, and 34 contributors. The top contributing countries are South Korea, China, Iran, and Russia. It observes the outbreak that we have all witnessed and looks at the positives around the vaccination that has surfaced. The reason why this dataset was generated was to investigate the impact of the coronavirus vaccine on the covid-19 mortality. This data file exceeds the amount of 200 observations and is a combination of a total of 3 different datasets which are sourced from Kaggle and the World Health Organization. It represents a majority of each country around the world and keeps track of their total vaccinations, number of people vaccinated, people fully vaccinated, new deaths per day, the population count, and the ratio of vaccinated individuals per available vaccinations. The majority of countries had a ratio of 0 -  6.11. The most common country to appear in this data set is the United States. The data was collected by Sina Karaji and it was updated last about a month ago meaning that it is up to date. The expected updated frequency of this dataset is every month. The reason why he created the dataset was because he noticed how many deaths have been caused since the outbreak of the coronavirus, so he wanted to look at the impact that the vaccination has had and how it has contributed to the progress beside global death counts. The author is also motivated to provide this information because of anti-vaccine groups that form even though vaccines have been proven to have many benefits. By doing this he is able to show people the positive impact of the vaccination, persuade the rest of the world to get vaccinated, and positively influence the impact of coronavirus vaccinations on coronavirus mentality. Those who are likely to be benefited from the data could be companies such as the CDC who are looking to view datasets that could help them combat the virus, but this could also interest people who are trying to convince anti-vaxxers that vaccinations are helpful and the public who wants to see the positive effect that the vaccine has had.
+
+### 5.0 Expected Implications
+Our group expects that policymakers and world leaders will utilize the data presented by **Project Vax** enact laws ensuring their citizens are provided with enough vaccinations to reach _herd immunity_  (when a large portion of the population becomes immune to a disease, it makes the spread of the disease from one individual to another very unlikely. As a result, the whole community is protected. This can be done through using the financial resources and size of their national governments to purchase vaccines in bulk quantities and at a reduced price. Policymakers must also ensure that their vaccines are accessible to their citizens, directionally and financially. We also expect **Project Vax** will be utilized as an educational aid to convince those who do not believe in the effectiveness of the COVID-19 vaccines.
+
+### 6.0 Limitations
+Our team acknowledges that there are certain limitations to this research project, such as access to accurate information. Because we cannot collect data on a scale this large, we are limited to the data provided by researchers who publish their records on the Internet. Moreover, the research from these studies that get published may not be inclusive of all demographics in an entire population; in order to classify that an individual has been vaccinated or tested positive for COVID-19, they had to have access to a testing site and proper healthcare provisions. In our country, there are certain demographics in our population (especially low-income communities of color) that do not have access to proper provisions, which means that the data we find on the internet won’t include affected individuals in those communities. There are also additional factors that contribute to the number of vaccinated or unvaccinated individuals in a population, such as medical exemptions due to allergies; however, the CDC has explicitly stated that for those with underlying medical conditions, the COVID-19 vaccination is safe to receive.
+
+### References
+Hanage, William P., et al. “COVID-19: US Federal Accountability for Entry, Spread, and Inequities—Lessons for the Future.” European Journal of Epidemiology, vol. 35, no. 11, Nov. 2020, pp. 995–1006, link.springer.com/article/10.1007/s10654-020-00689-2#citeas, 10.1007/s10654-020-00689-2.
+
+Bove, Tristan. “Fully Vaccinated People Are 93% Less Likely to Die of COVID Compared to Unvaccinated People.” Fortune, Fortune, 4 Feb. 2022, fortune.com/2022/02/04/fully-vaccinated-93-percent-less-likely-covid-death-compared-unvaccinated/.
+
+‌Chiwaya, Nigel. “900,000 Dead: Covid Deaths Are Surging in Low-Vaccination States.” NBC News, NBC News, 4 Feb. 2022, www.nbcnews.com/news/us-news/900-000-dead-covid-deaths-are-surging-low-vaccination-states-n1288586.
+>>>>>>> clone
