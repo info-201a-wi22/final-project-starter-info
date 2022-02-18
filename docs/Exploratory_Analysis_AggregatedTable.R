@@ -16,7 +16,6 @@ earlycountries <-
     ratio
     ) %>%
   rename(early_date = date)
-View(earlycountries)
 
 latecountries <- 
   data %>%
@@ -30,7 +29,6 @@ latecountries <-
     ratio
   ) %>%
   rename(recent_date = date)
-View(latecountries)
 
 compare <- 
   left_join(latecountries, earlycountries, by = "country") %>%
