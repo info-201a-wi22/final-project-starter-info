@@ -1,6 +1,8 @@
 ---
-title: "Project Vax"
+title: "The Impact of Vaccines"
+code name : "Project Vax"
 author: "project team members"
+Winter 2022
 date: "2/17/2022"
 output: html_document
 ---
@@ -8,6 +10,94 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+**Authors:**
+Emma Bacarra - ebacarra@uw.edu
+Jayden Set - jset@uw.edu
+Larry Nguyen - nguyenla@uw.edu
+Parker - parker10@uw.edu
+
+**Affiliation:** INFO-201: Technical Foundations of Informatics - The Information School - University of Washington
+
+### Abstract
+Our main question is how vaccines can create an impact on public health in the U.S. This question is important because vaccinations can lower an individual’s risk 
+for getting or spreading the virus, prevent severe symptoms, illness, and death, and initiates an antibody response in the immune system. To address the question, 
+we will compare vaccination rates to the mortality rate and the total number of cases.
+
+### Keywords
+Vaccinations, spread prevention, public health, and mortality rate.
+
+### 1.0 Introduction
+The dataset(s) we are analyzing shows us the rate of vaccinations across the United States and the infection/mortality rate among those vaccinated and unvaccinated 
+due to COVID-19. Our group is interested in exploring the effectiveness of the COVID-19 vaccines and how the data either supports or opposes the current iterations 
+of the COVID-19 vaccines in the fight against the virus and its variants. The outbreak of the Coronavirus vaccine has greatly disrupted modern life the past few 
+years and these vaccines can be the key to normality within the near future.
+
+### 2.0 Design Situation
+Our group’s topic of concern revolves around the COVID-19 and its relationship between vaccinated and unvaccinated people, and how vaccinations have a role to play 
+in the mortality rate which has been surging since the pandemic has started. The concern among getting everyone vaccinated stems from the human values of mutual 
+empathy and the love for your common man. We want everyone to stay healthy and alive. There is also the selfish concern of getting life back to normal, before the 
+global pandemic and the restrictions that came with it. The goal of vaccines is to reach herd immunity. In order to protect those vulnerable and unable to be 
+vaccinated, we strive to get every abled body vaccinated. In order to protect those vulnerable and unable to be vaccinated, we strive to get every abled body 
+vaccinated. The direct stakeholders, those who will directly interact with **Project Vax**, are political leaders and policymakers, whether local or federal, who 
+can explain the effectiveness of vaccines. The indirect stakeholders are those who did not directly interact with the project firsthand but can feel the effects
+from those who did. Indirect stakeholders may include the general public who are subject to laws and regulations placed upon them by policy makers and government 
+officials who have directly interacted with **Project Vax**. They may also include individuals who are at risk of contracting COVID-19 and unable to vaccinate 
+themselves due to preexisting conditions or individuals who refuse to be vaccinated and are being educated by those who are.  Lastly, these may include essential
+workers who are subject to regulations that may require them to be vaccinated or risk losing their jobs. Essential workers are put at risk of exposure and close 
+contact in their jobs everyday, and are in even more danger if the individuals they interact with are not doing their part to be cautious. The harms of **Project 
+Vax**  are the limitations of the existing data and its accuracy, the information can be biased to service political motivations that are promptly against 
+vaccines. However, the benefits of our project heavily outweigh the harms. With the information present in **Project Vax**; national, state and local governments 
+are better able to assess the situation of the global pandemic and enact policies and regulations accordingly. The hope is for representatives in the United 
+States’ lowest vaccinated states to enact change as deaths from the virus are highest among low vaccinated states (NBCNews, 2022). This can also include the
+expansion of free or affordable COVID-19 vaccines that are made accessible to the general public.
+
+### 3.0 Research Questions
+Our teams questions: 
+- How much of an impact do vaccines create on public health in the U.S.?
+- Have vaccinations helped the mortality rate of COVID-19 go down?
+- Are a majority of the population in countries fully vaxxed?
+- As the amount of new deaths were rising, were more people willing to get vaccinated?
+
+These questions are important because they are focused and aimed to find the positives that come with becoming vaccinated in order to prevent COVID-19’s death toll 
+from continuing to go up. With these questions, we want to be able to find the positives of being vaccinated and prove that it is something that could eventually 
+take down the virus. We also would like to shed light on how the vaccination actually works and could prevent death, doing this we could potentially motivate 
+people to go get vaccinated in order to combat the virus. We will address these questions by using our [dataset on vaccination vs death]
+(https://www.kaggle.com/sinakaraji/covid-vaccination-vs-death) . By doing so we could look at all countries across the globe and view content such as how many 
+people have been fully vaccinated and the ratio comparing the total population to the number of people who have got vaccinated.
+
+### 4.0 Data Set
+
+### 5.0 Expected Implications
+Our group expects that local, state, and federal policymakers will gain a greater understanding of the effectiveness of COVID-19 vaccines from our project “The 
+Impact of Vaccines”. The goal of our project is to inspire those will the power and influence to change policy/ enact laws that will ensure their citizens have 
+access to free or affordable vaccines in order to reach herd immunity (which is when a large portion of the population becomes immune to a disease, it makes the 
+spread of the disease from one individual to another very unlikely. As a result, the whole community is protected). This can be done through utilizing the large 
+size of government to acquire vaccines in bulk quantities at a low cost. Governments can also utilize data science to strategically move vaccines to cities and 
+states where demand and need are greatest. Not only do vaccines have to be financially accessible to everyone but it should be easy to find a vaccination site 
+locally and schedule an appointment with ease. We also expect **Project Vax** will be used as an educational tool to convince those who are resistant to receiving 
+a vaccine or those who do not believe in the effectiveness of vaccines.
+
+### 6.0 Limitations
+Our group acknowledges that there are certain limitations to this research project, such as 
+access to the most current and accurate information. Because of the scale of our research project, we are limited to data provided by third party researchers who 
+publish their records online. Moreover, the research from these studies may not be inclusive of all demographics in an entire population;  in order to classify 
+that an individual has been vaccinated or tested positive for COVID-19, they had to have access to a testing site and proper healthcare provisions. In the United 
+States, there are certain demographics in our population (especially low-income communities of color) that do not have access to proper provisions, which means 
+that the data we find on the internet won’t include individuals in those communities. There are additional factors such as the vaccine manufacturer, whether it is
+Pfizer, Moderna, or Johnson & Johnson or the different strains of COVID-19 (Delta, Omicron). Our research project also classifies a vaccinated individual as anyone 
+who received at least one dose of the vaccine. These factors may influence the infection and mortality rate of our research project. We must also take account of 
+factors that contribute to the number of vaccinated or unvaccinated individuals in a population, such as medical exemptions due to allergies; however, the CDC has 
+explicitly stated that for those with underlying medical conditions, the COVID-19 vaccination is safe to receive. 
+
+### References
+Hanage, William P., et al. “COVID-19: US Federal Accountability for Entry, Spread, and Inequities—Lessons for the Future.” European Journal of Epidemiology, vol. 
+35, no. 11, Nov. 2020, pp. 995–1006, link.springer.com/article/10.1007/s10654-020-00689-2#citeas, 10.1007/s10654-020-00689-2.
+
+Bove, Tristan. “Fully Vaccinated People Are 93% Less Likely to Die of COVID Compared to Unvaccinated People.” Fortune, Fortune, 4 Feb. 2022, 
+fortune.com/2022/02/04/fully-vaccinated-93-percent-less-likely-covid-death-compared-unvaccinated/.
+
+Chiwaya, Nigel. “900,000 Dead: Covid Deaths Are Surging in Low-Vaccination States.” NBC News, NBC News, 4 Feb. 2022, www.nbcnews.com/news/us-news/900-000-dead-
+covid-deaths-are-surging-low-vaccination-states-n1288586.
 
 ## What is this file for?
 
