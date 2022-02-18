@@ -173,24 +173,8 @@ View(compare)
 us_info <- compare[(compare$country == "United States of America"), ]
 us_info
 ```
-
-> `r msg` Hope you have a good day!! 
-
-## ABOUT THIS FILE: 
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
+Our aggregate table shows us the most the earliest data on total vaccinations per country and ratio between vaccinations and deaths. We then summarize the data
+for the most recent dates per country and its ratio between total vaccinations and deaths. Our goal is to showcase that the as more and more people become 
+vaccinated, the ratio between total vaccinations and new deaths would drop exponentally.
 
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
