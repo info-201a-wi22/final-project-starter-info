@@ -56,6 +56,6 @@ View(wa_state_data)
 ggplot(wa_state_data, aes(x=county, y=state_vax_pct)) +
   geom_point(size=2, shape=20)
 
-# This scatterplot compares counties in WA state to the percentages of those county
+# This scatter plot compares counties in WA state to the percentages of those county
 # populations with at least 1 dose of the vaccine. Data is pulled from the most 
 # recent date where vaccinations have been recorded.
