@@ -1,4 +1,5 @@
 library(dplyr)
+library(ggplot2)
 
 data <- read.csv("https://data.cdc.gov/api/views/8xkx-amqh/rows.csv?accessType=DOWNLOAD&bom=true&format=true")
 View(data)
@@ -46,4 +47,15 @@ View(recentdata)
 # with at least 1 dose of the vaccine. Includes general population (i.e. consensus
 # population) and general vaccinated percentage, along with statistics by age groups:
 # 5+, 12+, 18+, and 65+. 
-  
+
+wa_state_data <-
+  recentdata %>%
+  filter(state == "WA")
+View(wa_state_data)
+
+ggplot(wa_state_data, aes(x=county, y=state_vax_pct)) +
+  geom_point(size=2, shape=20)
+
+# This scatterplot compares counties in WA state to the percentages of those county
+# populations with at least 1 dose of the vaccine. Data is pulled from the most 
+# recent date where vaccinations have been recorded.
