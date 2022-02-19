@@ -192,8 +192,24 @@ Our aggregate table shows us the most the earliest data on total vaccinations pe
 for the most recent dates per country and its ratio between total vaccinations and deaths. Our goal is to showcase that the as more and more people become
 vaccinated, the ratio between total vaccinations and new deaths would drop exponentally.
 
-### Chart 2
+### Chart 1
 ```{r}
+library("tidyverse")
+library("ggplot2")
+
+dataset <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-starter-info/main/data/covid-vaccination-vs-death_ratio.csv")
+
+dataset %>%
+  filter(country == "United States of America") %>%
+  ggplot(aes(x = date, y = total_vaccinations, colour = country))+
+  geom_point(size = 5, alpha = 0.2)+
+  geom_line(size = 1)+
+  theme_minimal()+
+  labs(title = "Progession of Vaccinations in the US")
+
+#This line chart shows the progessioin of vaccinations within the US and how they have increased with time and how long COVID-19 has been around.
+
+### Chart 2
 library(dplyr)
 library(ggplot2)
 
