@@ -42,8 +42,8 @@ recentdata <-
   )
 View(recentdata)
 
-# `recentdata` compares population and percentage of that population
-# with at least 1 dose of the vaccine. Includes general population 
-# (i.e. consensus population) and general vaccinated percentage, along
-# with statistics by age groups: 5+, 12+, 18+, and 65+. 
+# `recentdata` compares population of a county and percentage of that population
+# with at least 1 dose of the vaccine. Includes general population (i.e. consensus
+# population) and general vaccinated percentage, along with statistics by age groups:
+# 5+, 12+, 18+, and 65+. 
   
