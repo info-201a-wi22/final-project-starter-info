@@ -6,10 +6,6 @@ View(data)
 
 colnames(data)[1] <- "Date"
 data$date <- as.Date(data$Date, "%m/%d/%Y")
-data$date
-class(data$date)
-
-colnames(data)
 
 # comparing total numbers ----
 data_total <- 
@@ -22,7 +18,12 @@ data_total <-
     State = Location, 
     `Total Distributed` = Distributed,
     `Total Administered` = Administered,
-    
+    `1+ Dose` = Administered_Dose1_Recip,
+    `Pct 1+ Dose` = Administered_Dose1_Pop_Pct,
+    `Fully Vaccinated` = Series_Complete_Yes,
+    `Pct Fully Vaccinated`= Series_Complete_Pop_Pct,
+    Boosted = Additional_Doses,
+    `Pct Boosted`= Additional_Doses_Vax_Pct
   )
 
 # comparing numbers in age groups based on jurisdiction (state) ----
@@ -35,6 +36,12 @@ data_5plus <-
     Date, 
     State = Location, 
     `Total Administered` = Administered_5Plus,
+    `1+ Dose` = Administered_Dose1_Recip_5Plus,
+    `Pct 1+ Dose` = Administered_Dose1_Recip_5PlusPop_Pct,
+    `Fully Vaccinated` = Series_Complete_5Plus,
+    `Pct Fully Vaccinated` = Series_Complete_5PlusPop_Pct
+    # Boosted not authorized for ages 5+
+    # `Pct Boosted` not available
   )
 
 data_12plus <-
@@ -46,6 +53,12 @@ data_12plus <-
     Date, 
     State = Location, 
     `Total Administered` = Administered_12Plus,
+    `1+ Dose` = Administered_Dose1_Recip_12Plus,
+    `Pct 1+ Dose` = Administered_Dose1_Recip_12PlusPop_Pct,
+    `Fully Vaccinated` = Series_Complete_12Plus,
+    `Pct Fully Vaccinated` = Series_Complete_12PlusPop_Pct,
+    Boosted = Additional_Doses_12Plus,
+    `Pct Boosted` = Additional_Doses_12Plus_Vax_Pct
   )
 
 data_18plus <-
@@ -57,6 +70,12 @@ data_18plus <-
     Date, 
     State = Location, 
     `Total Administered` = Administered_18Plus,
+    `1+ Dose` = Administered_Dose1_Recip_18Plus,
+    `Pct 1+ Dose` = Administered_Dose1_Recip_18PlusPop_Pct,
+    `Fully Vaccinated` = Series_Complete_18Plus,
+    `Pct Fully Vaccinated` = Series_Complete_18PlusPop_Pct,
+    Boosted = Additional_Doses_18Plus,
+    `Pct Boosted` = Additional_Doses_18Plus_Vax_Pct
   )
 
 data_65plus <-
@@ -68,6 +87,12 @@ data_65plus <-
     Date, 
     State = Location, 
     `Total Administered` = Administered_65Plus,
+    `1+ Dose` = Administered_Dose1_Recip_65Plus,
+    `Pct 1+ Dose` = Administered_Dose1_Recip_65PlusPop_Pct,
+    `Fully Vaccinated` = Series_Complete_65Plus,
+    `Pct Fully Vaccinated` = Series_Complete_65PlusPop_Pct,
+    Boosted = Additional_Doses_65Plus,
+    `Pct Boosted` = Additional_Doses_65Plus_Vax_Pct
   )
 
 # `recentdata` compares population of a county and percentage of that population
