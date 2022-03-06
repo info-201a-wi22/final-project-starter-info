@@ -1,4 +1,4 @@
-# ---------- DEVELOPING PAGES ----------
+# ---------- INTRODUCTORY PAGE ----------
 introductory_page <- tabPanel("Introduction",
   h3("A Brief Overview"),
   
@@ -8,7 +8,7 @@ introductory_page <- tabPanel("Introduction",
   # such as an image. The key goal: Invite your audience to consider your project.
 )
 
-
+# ---------- INTERACTIVE PAGE 1 (Chart 1) ----------
 interactive_page_1 <- tabPanel(
   
   # Three interactive pages.  Each of these pages will consider a different aspect of 
@@ -21,7 +21,7 @@ interactive_page_1 <- tabPanel(
   # ^^ I talked to Samuel & he said we only need to do two because of our situation
 )
 
-
+# ---------- INTERACTIVE PAGE 2 (Chart 2) ----------
 interactive_page_2 <- tabPanel(
   
   # Three interactive pages.  Each of these pages will consider a different aspect of 
@@ -33,7 +33,7 @@ interactive_page_2 <- tabPanel(
   
 )
 
-
+# ---------- SUMMARY PAGE ----------
 summary_page <- tabPanel("Summary",
   # Summary takeaways, a page that hones in on at least 3 major takeaways from the 
   # project (which should be related to a specific aspect of your analysis). Feel free 
@@ -42,6 +42,7 @@ summary_page <- tabPanel("Summary",
 )
 
 
+# ---------- REPORT PAGE ----------
 report_page <- tabPanel("Report",
   # Report page.  Iterate on your P01 and P02 to present your final report.  See 
   # below.  The key goal: Write a concise, clear, and interesting summary of your project. 
