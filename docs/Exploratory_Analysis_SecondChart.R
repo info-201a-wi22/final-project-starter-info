@@ -1,7 +1,7 @@
 library(dplyr)
 library(ggplot2)
 
-data <- read.csv("https://data.cdc.gov/api/views/8xkx-amqh/rows.csv?accessType=DOWNLOAD&bom=true&format=true")
+data <- read.csv("https://data.cdc.gov/api/views/unsk-b7fc/rows.csv?accessType=DOWNLOAD&bom=true&format=true")
 View(data)
 
 colnames(data)[1] <- "Date"
@@ -9,25 +9,66 @@ data$date <- as.Date(data$Date, "%m/%d/%Y")
 data$date
 class(data$date)
 
-recentdata <-
+colnames(data)
+
+# comparing total numbers ----
+data_total <- 
   data %>%
-  filter(date == (max(date))) %>%
-  summarize( 
+  filter(! Location %in% c(
+    "BP2", "DD2", "FM", "IH2","VA2"
+  )) %>%
+  summarize(
     Date,
-    county = Recip_County,
-    state = Recip_State,
-    totpop_2019 = Census2019, # census population
-    state_vax_pct = Administered_Dose1_Pop_Pct, # % w/ at least 1 dose by state
-    age5_pop2019 = Census2019_5PlusPop, # census population age group 5
-    age5_pctvax = Administered_Dose1_Recip_5PlusPop_Pct, # % at least 1 dose age group 5
-    age12_pop2019 = Census2019_12PlusPop, # census population age group 12
-    age12_pctvax = Administered_Dose1_Recip_12PlusPop_Pct, # % at least 1 dose age group 12
-    age18_pop2019 = Census2019_18PlusPop, # census population age group 18
-    age18_pctvax = Administered_Dose1_Recip_18PlusPop_Pct, # % at least 1 dose age group 18
-    age65_pop2019 = Census2019_65PlusPop, # census population age group 65
-    age65_pctvax = Administered_Dose1_Recip_65PlusPop_Pct # % at least 1 dose age group 65
+    State = Location, 
+    `Total Distributed` = Distributed,
+    `Total Administered` = Administered,
+    
   )
-View(recentdata)
+
+# comparing numbers in age groups based on jurisdiction (state) ----
+data_5plus <- 
+  data %>%
+  filter(! Location %in% c(
+    "BP2", "DD2", "FM", "IH2","VA2"
+  )) %>%
+  summarize(
+    Date, 
+    State = Location, 
+    `Total Administered` = Administered_5Plus,
+  )
+
+data_12plus <-
+  data %>%
+  filter(! Location %in% c(
+    "BP2", "DD2", "FM", "IH2","VA2"
+  )) %>%
+  summarize(
+    Date, 
+    State = Location, 
+    `Total Administered` = Administered_12Plus,
+  )
+
+data_18plus <-
+  data %>%
+  filter(! Location %in% c(
+    "BP2", "DD2", "FM", "IH2","VA2"
+  )) %>%
+  summarize(
+    Date, 
+    State = Location, 
+    `Total Administered` = Administered_18Plus,
+  )
+
+data_65plus <-
+  data %>%
+  filter(! Location %in% c(
+    "BP2", "DD2", "FM", "IH2","VA2"
+  )) %>%
+  summarize(
+    Date, 
+    State = Location, 
+    `Total Administered` = Administered_65Plus,
+  )
 
 # `recentdata` compares population of a county and percentage of that population
 # with at least 1 dose of the vaccine. Includes general population (i.e. consensus
