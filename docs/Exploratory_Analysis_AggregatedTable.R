@@ -33,10 +33,10 @@ latecountries <-
 compare <- 
   left_join(latecountries, earlycountries, by = "country") %>%
   mutate(
-    time_passed = as.Date(compare$recent_date) - as.Date(compare$early_date),
-    ratio_diff = compare$ratio.x - compare$ratio.y,
-    vax_change = compare$total_vaccinations.x - compare$total_vaccinations.y,
-    death_change = compare$New_deaths.x - compare$New_deaths.y
+    time_passed = as.Date(recent_date) - as.Date(early_date),
+    ratio_diff = ratio.x - ratio.y,
+    vax_change = total_vaccinations.x - total_vaccinations.y,
+    death_change = New_deaths.x - New_deaths.y
     ) %>%
   select(
     country,

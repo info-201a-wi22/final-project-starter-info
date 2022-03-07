@@ -1,61 +1,87 @@
-library(dplyr)
-library(ggplot2)
 
-data <- read.csv("https://data.cdc.gov/api/views/8xkx-amqh/rows.csv?accessType=DOWNLOAD&bom=true&format=true")
+data <- read.csv("https://data.cdc.gov/api/views/unsk-b7fc/rows.csv?accessType=DOWNLOAD&bom=true&format=true")
 View(data)
 
 colnames(data)[1] <- "Date"
 data$date <- as.Date(data$Date, "%m/%d/%Y")
-data$date
-class(data$date)
 
-recentdata <-
+# Comparing vaccination status numbers by general population and age groups:
+
+# comparing total numbers ----
+General_Population <- 
   data %>%
-  filter(date == (max(date))) %>%
-  summarize( 
+  filter(! Location %in% c(
+    "BP2", "DD2", "FM", "IH2","VA2"
+  )) %>%
+  summarize(
     Date,
-    Recip_County,
-    Recip_State,
-    Census2019, # census population
-    Administered_Dose1_Pop_Pct, # % w/ at least 1 dose by state
-    Census2019_5PlusPop, # census population age group 5
-    Administered_Dose1_Recip_5PlusPop_Pct, # % at least 1 dose age group 5
-    Census2019_12PlusPop, # census population age group 12
-    Administered_Dose1_Recip_12PlusPop_Pct, # % at least 1 dose age group 12
-    Census2019_18PlusPop, # census population age group 18
-    Administered_Dose1_Recip_18PlusPop_Pct, # % at least 1 dose age group 18
-    Census2019_65PlusPop, # census population age group 65
-    Administered_Dose1_Recip_65PlusPop_Pct # % at least 1 dose age group 65
-  ) %>%
-  rename(
-    county = Recip_County,
-    state = Recip_State,
-    totpop_2019 = Census2019,
-    state_vax_pct = Administered_Dose1_Pop_Pct,
-    age5_pop2019 = Census2019_5PlusPop,
-    age5_pctvax = Administered_Dose1_Recip_5PlusPop_Pct,
-    age12_pop2019 = Census2019_12PlusPop,
-    age12_pctvax = Administered_Dose1_Recip_12PlusPop_Pct,
-    age18_pop2019 = Census2019_18PlusPop,
-    age18_pctvax = Administered_Dose1_Recip_18PlusPop_Pct,
-    age65_pop2019 = Census2019_65PlusPop,
-    age65_pctvax = Administered_Dose1_Recip_65PlusPop_Pct
+    State = Location, 
+    `Total Distributed` = Distributed,
+    `Total Administered` = Administered,
+    `1+ Dose` = Administered_Dose1_Recip,
+    `Full Vaccination` = Series_Complete_Yes,
+    Booster = Additional_Doses
   )
-View(recentdata)
 
-# `recentdata` compares population of a county and percentage of that population
-# with at least 1 dose of the vaccine. Includes general population (i.e. consensus
-# population) and general vaccinated percentage, along with statistics by age groups:
-# 5+, 12+, 18+, and 65+. 
 
-wa_state_data <-
-  recentdata %>%
-  filter(state == "WA")
-View(wa_state_data)
+# ---------- Plotting ----------
+get_col <- function(dataframe, column) {
+  get <- dataframe[, column]
+}
 
-ggplot(wa_state_data, aes(x=county, y=state_vax_pct)) +
-  geom_point(size=2, shape=20)
+create_map <- function(chosen_date, vaccination_status) {
+  get_date <- as.Date(chosen_date, "%m/%d/%Y")
+  map <- General_Population %>% 
+    filter(Date == get_date)
+  status <- get_col(map, substitute(vaccination_status))
+  ggplot(map) +
+    geom_polygon(
+      mapping = aes(
+        x = long,
+        y = lat,
+        group = group,
+        fill = status
+      )
+    ) + coord_map() + scale_fill_viridis(option = "viridis") + 
+    labs(fill = "Amount") +
+    ggtitle(paste("General Population with", vaccination_status, "on", chosen_date))
+}
 
-# This scatter plot compares counties in WA state to the percentages of those county
-# populations with at least 1 dose of the vaccine. Data is pulled from the most 
-# recent date where vaccinations have been recorded.
+state_coords <- 
+  map_data("state") %>%
+  unite(polyname, region) %>%
+  left_join(state.fips, by = "polyname") %>%
+  rename(name = polyname, State = abb)
+
+General_Population <-state_coords %>% left_join(General_Population, by = "State")
+
+create_map("03/06/2022", "Booster")
+
+test <- General_Population %>% 
+  filter(Date == max(Date))
+View(test)
+
+class(General_Population$Date)
+
+ggplot(test) +
+  geom_polygon(
+    mapping = aes(
+      x = long,
+      y = lat,
+      group = group,
+      fill = Booster
+    )
+  ) + coord_map() + scale_fill_viridis(option = "viridis") + 
+  labs(fill = "Booster") +
+  ggtitle(paste("General Population with"))
+
+
+ggplot(test) +
+  geom_polygon(
+    mapping = aes(
+      x = long,
+      y = lat,
+      group = group,
+      fill = 
+    )
+  )
