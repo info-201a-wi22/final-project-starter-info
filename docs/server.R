@@ -7,9 +7,11 @@ server <- function(input, output, session){
   genpop_selector <- reactive({
     req(input$date_selector)
     req(input$vax_status_selector)
+    
     validate(
       need(input$vax_status_selector != "Select", "Please select a vaccination status.")
     )
+    
     map <- filter(General_Population, Date %in% input$date_selector) %>%
       select(Date, State, input$vax_status_selector) %>%
       left_join(state_coords, map, by = "State")
@@ -26,7 +28,7 @@ server <- function(input, output, session){
           x = long,
           y = lat,
           group = group,
-          fill = input$vax_status_selector #fix error
+          fill = map[, substitute(input$vax_status_selector)] #fix error
         )
       ) + coord_map() + scale_fill_viridis(option = "viridis") +
       labs(fill = "Population") +
