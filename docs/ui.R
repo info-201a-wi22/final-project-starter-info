@@ -62,6 +62,30 @@ interactive_page_2 <- tabPanel("Getting Vaccinated",
   # ^^ I talked to Samuel & he said we only need to do two because of our situation
   
   h3("Vaccination Status By Age Group"),
+  
+  fluidPage(
+    tabsetPanel(
+      tabPanel("General Population"
+        
+      ),
+      
+      tabPanel("Ages 5+"
+        
+      ),
+      
+      tabPanel("Ages 12+"
+        
+      ),
+      
+      tabPanel("Ages 18+"
+        
+      ),
+      
+      tabPanel("Ages 65+"
+        
+      )
+    )
+  )
  
 )
 
