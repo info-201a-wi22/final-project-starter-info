@@ -14,6 +14,7 @@ server <- function(input, output, session){
   output$genpop <- renderPlotly({
     input$date_selector
     input$vax_status_selector
+    genpop_selector()
     genpop_selector() <- state_coords %>% left_join(genpop_selector(), by = "State")
     
     ggplot(genpop_selector()) +
@@ -22,11 +23,11 @@ server <- function(input, output, session){
           x = long,
           y = lat,
           group = group,
-          fill = Amount
+          fill = genpop_selector()[, input$vax_status_selector]
         )
       ) + coord_map() + scale_fill_viridis(option = "viridis") +
-      labs(fill = chosen_data) +
-      ggtitle(paste(chosen_data, "in", region_category, "for", year_number))
+      labs(fill = "Population") +
+      ggtitle(paste(input$vax_status_selector, "status on", input$date_selector))
   })
   
   # ---------- SUMMARY PAGE ----------
