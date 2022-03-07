@@ -6,6 +6,8 @@ introductory_page <- tabPanel("Introduction",
   # such as an image. The key goal: Invite your audience to consider your project.
   
   h3("A Brief Overview"),
+  
+  p("Under Construction")
 )
 
 
@@ -17,6 +19,8 @@ report_page <- tabPanel("Report",
   # Put index.rmd file here
   
   h3("Our Process"),
+  
+  p("Under Construction")
 )
 
 
@@ -28,6 +32,8 @@ summary_page <- tabPanel("Summary",
   # The key goal: Present the key takeaways for your audience.
 
   h3("Major Takeaways"),
+  
+  p("Under Construction")
 )
 
 
@@ -39,13 +45,15 @@ interactive_page_1 <- tabPanel("Counting Cases",
   # interactivity (e.g., Shiny widgets + 1 or more reactive charts) for exploring the 
   # question of interest. If you would prefer to make fewer pages with more complexity, 
   # check with your TA/professor. The key goal: Present visualizations that help your 
-  # audience understand your datasets.
+  # audience understand your data sets.
   
   # ^^ I talked to Samuel & he said we only need to do two because of our situation
   
   h3("Title"),
   
-  p("Insert covid cases data here")
+  p("Under Construction")
+  
+  # let's compare regular count of covid cases &/or mortality rates here
 )
 
 
@@ -57,7 +65,7 @@ interactive_page_2 <- tabPanel("Getting Vaccinated",
   # interactivity (e.g., Shiny widgets + 1 or more reactive charts) for exploring the 
   # question of interest. If you would prefer to make fewer pages with more complexity, 
   # check with your TA/professor. The key goal: Present visualizations that help your 
-  # audience understand your datasets.
+  # audience understand your data sets.
   
   # ^^ I talked to Samuel & he said we only need to do two because of our situation
   
