@@ -66,7 +66,7 @@ interactive_page_2 <- tabPanel("Getting Vaccinated",
   fluidPage(
     tabsetPanel(
       tabPanel("General Population"
-        
+        # take dataset, filter map by chosen date
       ),
       
       tabPanel("Ages 5+"

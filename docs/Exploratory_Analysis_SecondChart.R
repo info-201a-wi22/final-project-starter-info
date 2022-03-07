@@ -7,8 +7,10 @@ View(data)
 colnames(data)[1] <- "Date"
 data$date <- as.Date(data$Date, "%m/%d/%Y")
 
+# Comparing vaccination status numbers by general population and age groups:
+
 # comparing total numbers ----
-data_total <- 
+General_Population <- 
   data %>%
   filter(! Location %in% c(
     "BP2", "DD2", "FM", "IH2","VA2"
@@ -27,7 +29,7 @@ data_total <-
   )
 
 # comparing numbers in age groups based on jurisdiction (state) ----
-data_5plus <- 
+Age_5plus <- 
   data %>%
   filter(! Location %in% c(
     "BP2", "DD2", "FM", "IH2","VA2"
@@ -44,7 +46,7 @@ data_5plus <-
     # `Pct Boosted` not available
   )
 
-data_12plus <-
+Age_12plus <-
   data %>%
   filter(! Location %in% c(
     "BP2", "DD2", "FM", "IH2","VA2"
@@ -61,7 +63,7 @@ data_12plus <-
     `Pct Boosted` = Additional_Doses_12Plus_Vax_Pct
   )
 
-data_18plus <-
+Age_18plus <-
   data %>%
   filter(! Location %in% c(
     "BP2", "DD2", "FM", "IH2","VA2"
@@ -78,7 +80,7 @@ data_18plus <-
     `Pct Boosted` = Additional_Doses_18Plus_Vax_Pct
   )
 
-data_65plus <-
+Age_65plus <-
   data %>%
   filter(! Location %in% c(
     "BP2", "DD2", "FM", "IH2","VA2"
@@ -95,19 +97,40 @@ data_65plus <-
     `Pct Boosted` = Additional_Doses_65Plus_Vax_Pct
   )
 
-# `recentdata` compares population of a county and percentage of that population
-# with at least 1 dose of the vaccine. Includes general population (i.e. consensus
-# population) and general vaccinated percentage, along with statistics by age groups:
-# 5+, 12+, 18+, and 65+. 
+# ---------- Plotting ----------
+get_col <- function(dataframe, column) {
+  get <- dataframe[, column]
+}
+create_map <- function(chosen_date, age_group) {
+  map <- age_group %>% filter(Date == as.character(chosen_date))
+  `Fully Vaccinated` <- get_col(map, "Fully Vaccinated")
+  ggplot(map) +
+    geom_polygon(
+      mapping = aes(
+        x = long,
+        y = lat,
+        group = group,
+        fill = `Fully Vaccinated`
+      )
+    ) + coord_map() + scale_fill_viridis(option = "viridis") + 
+    labs(fill = `Fully Vaccinated`) +
+    ggtitle(paste(age_group, "vaccination status for", chosen_date))
+}
 
-wa_state_data <-
-  recentdata %>%
-  filter(state == "WA")
-View(wa_state_data)
+state_coords <- 
+  map_data("state") %>%
+  unite(polyname, region) %>%
+  left_join(state.fips, by = "polyname") %>%
+  rename(name = polyname, State = abb)
 
-ggplot(wa_state_data, aes(x=county, y=state_vax_pct)) +
-  geom_point(size=2, shape=20)
+General_Population <-state_coords %>% left_join(General_Population, by = "State")
 
-# This scatter plot compares counties in WA state to the percentages of those county
-# populations with at least 1 dose of the vaccine. Data is pulled from the most 
-# recent date where vaccinations have been recorded.
+Age_5plus <- state_coords %>% left_join(General_Population, by = "State")
+
+Age_12plus <- state_coords %>% left_join(General_Population, by = "State")
+
+Age_18plus <- state_coords %>% left_join(General_Population, by = "State")
+
+Age_65plus <- state_coords %>% left_join(General_Population, by = "State")
+
+create_map("03/06/2022", General_Population)
