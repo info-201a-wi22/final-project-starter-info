@@ -11,8 +11,8 @@ introductory_page <- tabPanel("Introduction",
 
 # ---------- REPORT PAGE ----------
 report_page <- tabPanel("Report",
-  # Report page.  Iterate on your P01 and P02 to present your final report.  See 
-  # below.  The key goal: Write a concise, clear, and interesting summary of your project. 
+  # Report page.  Iterate on your P01 and P02 to present your final report. See below.  
+  # The key goal: Write a concise, clear, and interesting summary of your project. 
   
   # Put index.rmd file here
   
@@ -43,12 +43,14 @@ interactive_page_1 <- tabPanel("Counting Cases",
   
   # ^^ I talked to Samuel & he said we only need to do two because of our situation
   
-  h3("Title")
+  h3("Title"),
+  
+  p("Insert covid cases data here")
 )
 
 
 # ---------- INTERACTIVE PAGE 2 ----------
-interactive_page_2 <- tabPanel("Vaccinations By The Numbers",
+interactive_page_2 <- tabPanel("Getting Vaccinated",
   
   # Three interactive pages.  Each of these pages will consider a different aspect of 
   # your data, addressing specific questions. Each page should have sufficient 
@@ -59,7 +61,7 @@ interactive_page_2 <- tabPanel("Vaccinations By The Numbers",
   
   # ^^ I talked to Samuel & he said we only need to do two because of our situation
   
-  h3("Comparing By Age Groups"),
+  h3("Vaccination Status By Age Group"),
  
 )
 
