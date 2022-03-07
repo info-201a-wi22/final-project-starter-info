@@ -68,6 +68,11 @@ interactive_page_2 <- tabPanel("Getting Vaccinated",
       selectInput("date", "Select A Date",
         choices = unique(General_Population$Date),
         selected = max(General_Population$Date)
+      ),
+      
+      selectInput("vax_status", "Select a Vaccination Status",
+        choices = c("1+ Dose", "Full Vaccination", "Booster"),
+        selected = "1+ Dose"
       )
     ),
     
