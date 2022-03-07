@@ -67,31 +67,11 @@ interactive_page_2 <- tabPanel("Getting Vaccinated",
     column(4, 
       selectInput("date", "Select A Date",
         choices = unique(General_Population$Date),
-        selected = max(General_Population)
+        selected = max(General_Population$Date)
       )
     ),
     
-    tabsetPanel(
-      tabPanel("General Population"
-        # take dataset, filter map by chosen date
-      ),
-      
-      tabPanel("Ages 5+"
-        
-      ),
-      
-      tabPanel("Ages 12+"
-        
-      ),
-      
-      tabPanel("Ages 18+"
-        
-      ),
-      
-      tabPanel("Ages 65+"
-        
-      )
-    )
+    mainPanel(plotlyOutput("genpop"))
   )
  
 )

@@ -29,26 +29,6 @@ server <- function(input, output, session){
     return(render)
   })
   
-  output$age5 <- renderPlotly({
-    render <- create_map(input$date, Age_5plus)
-    return(render)
-  })
-  
-  output$age12 <- renderPlotly({
-    render <- create_map(input$date, Age_12plus)
-    return(render)
-  })
-  
-  output$age18 <- renderPlotly({
-    render <- create_map(input$date, Age_18plus)
-    return(render)
-  })
-  
-  output$age65 <- renderPlotly({
-    render <- create_map(input$date, Age_65plus)
-    return(render)
-  })
-  
   # ---------- SUMMARY PAGE ----------
   
   # ---------- REPORT PAGE ----------
