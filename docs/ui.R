@@ -49,7 +49,7 @@ interactive_page_1 <- tabPanel("Counting Cases",
   
   # ^^ I talked to Samuel & he said we only need to do two because of our situation
   
-  h3("Title"),
+  h3("Cases/Deaths in the U.S."),
   
   p("Under Construction")
   
@@ -69,13 +69,14 @@ interactive_page_2 <- tabPanel("Getting Vaccinated",
   
   # ^^ I talked to Samuel & he said we only need to do two because of our situation
   
-  h3("Vaccination Status By Age Group"),
+  h3("Vaccination Status Of The General Population"), 
+  br(),
   
   fluidPage(
     column(4, 
       selectInput("vax_status_selector", "Select a Vaccination Status",
-        choices = c("1+ Dose", "Full Vaccination", "Booster"),
-        selected = "1+ Dose"
+        choices = c("Select", "1+ Dose", "Full Vaccination", "Booster"),
+        selected = "Select"
       ),
       
       dateInput("date_selector", "Select a Date",
