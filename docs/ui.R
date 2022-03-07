@@ -31,8 +31,8 @@ summary_page <- tabPanel("Summary",
 )
 
 
-# ---------- INTERACTIVE PAGE 1 (Chart 1) ----------
-interactive_page_1 <- tabPanel(
+# ---------- INTERACTIVE PAGE 1 ----------
+interactive_page_1 <- tabPanel("Counting Cases",
   
   # Three interactive pages.  Each of these pages will consider a different aspect of 
   # your data, addressing specific questions. Each page should have sufficient 
@@ -42,11 +42,13 @@ interactive_page_1 <- tabPanel(
   # audience understand your datasets.
   
   # ^^ I talked to Samuel & he said we only need to do two because of our situation
+  
+  h3("Title")
 )
 
 
-# ---------- INTERACTIVE PAGE 2 (Chart 2) ----------
-interactive_page_2 <- tabPanel("Vaccinations By The Numbers"
+# ---------- INTERACTIVE PAGE 2 ----------
+interactive_page_2 <- tabPanel("Vaccinations By The Numbers",
   
   # Three interactive pages.  Each of these pages will consider a different aspect of 
   # your data, addressing specific questions. Each page should have sufficient 
@@ -54,6 +56,10 @@ interactive_page_2 <- tabPanel("Vaccinations By The Numbers"
   # question of interest. If you would prefer to make fewer pages with more complexity, 
   # check with your TA/professor. The key goal: Present visualizations that help your 
   # audience understand your datasets.
+  
+  # ^^ I talked to Samuel & he said we only need to do two because of our situation
+  
+  h3("Comparing By Age Groups"),
  
 )
 
@@ -61,7 +67,7 @@ interactive_page_2 <- tabPanel("Vaccinations By The Numbers"
 # ---------- FORMING UI ----------
 ui <- fluidPage(
   navbarPage("Project Vax",
-    introductory_page, summary_page, report_page, 
+    introductory_page, report_page, summary_page,
     navbarMenu("Explore", interactive_page_1, interactive_page_2)
   )
 )
