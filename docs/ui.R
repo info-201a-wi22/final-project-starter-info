@@ -64,6 +64,13 @@ interactive_page_2 <- tabPanel("Getting Vaccinated",
   h3("Vaccination Status By Age Group"),
   
   fluidPage(
+    column(4, 
+      selectInput("date", "Select A Date",
+        choices = unique(General_Population$Date),
+        selected = max(General_Population)
+      )
+    ),
+    
     tabsetPanel(
       tabPanel("General Population"
         # take dataset, filter map by chosen date
