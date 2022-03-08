@@ -21,7 +21,7 @@ report_page <- tabPanel("Report",
   # Report page.  Iterate on your P01 and P02 to present your final report. See below.  
   # The key goal: Write a concise, clear, and interesting summary of your project. 
   
-  # Put index.rmd file here, Exploratory Analysis Charts 
+  # Put index.rmd file, Exploratory Analysis Charts, Aggregate Table, etc
   
   h3("Our Process"),
   
@@ -45,20 +45,14 @@ summary_page <- tabPanel("Summary",
 # ---------- INTERACTIVE PAGE 1 ----------
 interactive_page_1 <- tabPanel("Counting Cases",
   
-  # Three interactive pages.  Each of these pages will consider a different aspect of 
-  # your data, addressing specific questions. Each page should have sufficient 
-  # interactivity (e.g., Shiny widgets + 1 or more reactive charts) for exploring the 
-  # question of interest. If you would prefer to make fewer pages with more complexity, 
-  # check with your TA/professor. The key goal: Present visualizations that help your 
-  # audience understand your data sets.
-  
-  # ^^ I talked to Samuel & he said we only need to do two because of our situation
+  # let's compare regular count of covid cases &/or mortality rates here, I left
+  # a note in the interactive_1.R file for some guidance -Emma
   
   h3("Cases/Deaths in the U.S."),
   
   p("Under Construction")
   
-  # let's compare regular count of covid cases &/or mortality rates here
+  
 )
 
 
