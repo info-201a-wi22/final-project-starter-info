@@ -1,3 +1,8 @@
+
+# Note: pages are individually built starting with tabPanel() which will be combined 
+# into fluid UI page on the bottom, please keep format to avoid confusion. Load the
+# app to visualize.
+
 # ---------- INTRODUCTORY PAGE ----------
 introductory_page <- tabPanel("Introduction",
   # An introductory page.  This page should provide a brief overview of your project: 
