@@ -27,8 +27,5 @@ General_Population <-
     `Fully Vaccinated` = as.numeric(gsub(",", "", Series_Complete_Yes)),
     Boosted = as.numeric(gsub(",", "", Additional_Doses)),
   ) %>%
-  mutate(
-    `Not Vaccinated` = `Total Distributed` - `Total Administered`
-  ) %>%
   right_join(state_coords, by = "State")
 

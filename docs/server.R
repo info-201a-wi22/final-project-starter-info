@@ -27,8 +27,6 @@ server <- function(input, output, session){
       ggtitle(paste(input$vax_status_selector, "Population For", input$date_selector))
   })
   
-  # FIX: 
-  # Warning: Error in : Discrete value supplied to continuous scale
   
   # ---------- SUMMARY PAGE ----------
   

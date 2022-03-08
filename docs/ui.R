@@ -75,7 +75,7 @@ interactive_page_2 <- tabPanel("Getting Vaccinated",
   fluidPage(
     column(4, 
       selectInput("vax_status_selector", "Select a Vaccination Status",
-        choices = c("Select", "Not Vaccinated", "Single Dosed", "Fully Vaccinated", "Boosted"),
+        choices = c("Select", "Single Dosed", "Fully Vaccinated", "Boosted"),
         selected = "Select"
       ),
       
