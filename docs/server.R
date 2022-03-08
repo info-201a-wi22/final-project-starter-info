@@ -13,8 +13,7 @@ server <- function(input, output, session){
     )
     
     General_Population %>%
-      filter(Date == as.Date(input$date_selector))# %>%
-      #select(Date, State, lat, long, group, as.name(input$vax_status_selector))
+      filter(Date == as.Date(input$date_selector))
   })
   
   output$genpop <- renderPlotly({
