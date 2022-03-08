@@ -1,15 +1,15 @@
 library(dplyr)
 library(ggplot2)
 
-data <- read.csv("https://data.cdc.gov/api/views/8xkx-amqh/rows.csv?accessType=DOWNLOAD&bom=true&format=true")
-View(data)
-colnames(data)[1] <- "Date"
-data$date <- as.Date(data$Date, "%m/%d/%Y")
-data$date
-class(data$date)
+data_chart2 <- read.csv("https://data.cdc.gov/api/views/8xkx-amqh/rows.csv?accessType=DOWNLOAD&bom=true&format=true")
+View(data_chart2)
+colnames(data_chart2)[1] <- "Date"
+data_chart2$date <- as.Date(data_chart2$Date, "%m/%d/%Y")
+data_chart2$date
+class(data_chart2$date)
 
 recentdata <-
-  data %>%
+  data_chart2 %>%
   filter(date == (max(date))) %>%
   summarize(
     Date,
