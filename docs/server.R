@@ -5,15 +5,12 @@ server <- function(input, output, session){
   
   # ---------- INTERACTIVE PAGE 2 ----------
   genpop_selector <- reactive({
-    req(input$vax_status_selector)
-    req(input$date_selector)
-    
     validate(
       need(input$vax_status_selector != "Select", "Please select a vaccination status.")
     )
     
     General_Population %>%
-      filter(Date == as.Date(input$date_selector))
+      filter(Date == input$date_selector)
   })
   
   output$genpop <- renderPlotly({
@@ -25,13 +22,13 @@ server <- function(input, output, session){
           group = group,
           fill = input$vax_status_selector
         )
-      ) + coord_map() + scale_fill_viridis(option = "viridis") +
-      labs(fill = "Population")
+      ) + coord_map() + scale_fill_viridis(option = "magma") +
+      labs(fill = "Census") +
+      ggtitle(paste(input$vax_status_selector, "Population For", input$date_selector))
   })
   
   # FIX: 
-  # Warning: Error in : Aesthetics must be either length 1 
-  # or the same as the data (1): x, y and group
+  # Warning: Error in : Discrete value supplied to continuous scale
   
   # ---------- SUMMARY PAGE ----------
   
