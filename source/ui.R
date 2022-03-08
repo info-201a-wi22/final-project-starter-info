@@ -26,7 +26,7 @@ report_page <- tabPanel("Report",
   
   # Put index.rmd file & aggregate table
   
-  h3("Our Process"),
+  h3("Our Process"), br(),
   
   tabsetPanel(
     tabPanel("Index", br(), br(),
