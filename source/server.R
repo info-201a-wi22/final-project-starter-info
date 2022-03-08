@@ -35,7 +35,12 @@ server <- function(input, output, session){
   })
   
   
+  # ---------- REPORT PAGE ----------
+  output$agg_table <- DT::renderDataTable({
+    DT::datatable(compare_agg_table)
+  })
+  
+  
   # ---------- SUMMARY PAGE ----------
   
-  # ---------- REPORT PAGE ----------
 }

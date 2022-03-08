@@ -6,7 +6,7 @@ data_int1 <-
   filter(country == "United States of America") # filtering since we're only doing U.S.
 data_int1$date <- as.Date(data_int1$date) # converting to class date
 
-View(data_int1)
+#View(data_int1)
 
 # To make it more interactive, make a selectInput() in UI under "INTERACTIVE PAGE 1"
 # & have it so user can select which line is displayed (i.e. choosing between 
