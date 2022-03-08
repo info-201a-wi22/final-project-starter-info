@@ -2,7 +2,7 @@
 data_int2 <- 
   read.csv("https://data.cdc.gov/api/views/unsk-b7fc/rows.csv?accessType=DOWNLOAD&bom=true&format=true") %>%
   rename(Date = ï..Date)
-data_in2$Date <- as.Date(data_in2$Date, "%m/%d/%Y")
+data_int2$Date <- as.Date(data_int2$Date, "%m/%d/%Y")
 
 state_coords <- 
   map_data("state") %>%
