@@ -5,7 +5,7 @@ p_load(
   data.table, mapdata, ggmap, maps, viridis, DT, plotly
 )
 
-source("Exploratory_Analysis_SecondChart.R")
+source("interactive_2.R")
 source("server.R")
 source("ui.R")
 
