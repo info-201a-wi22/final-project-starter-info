@@ -1,3 +1,5 @@
+setwd("C:/Users/ebaca/Desktop/School/final-project-starter-info/docs")
+
 library(pacman) # <- for loading multiple libraries at once
 
 p_load(
@@ -6,7 +8,6 @@ p_load(
 )
 
 source("interactive_2.R")
-source("Exploratory_Analysis_SecondChart.R")
 
 # source these last:
 source("server.R")
