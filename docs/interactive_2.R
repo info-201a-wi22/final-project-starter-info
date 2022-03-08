@@ -48,4 +48,4 @@ ggplot(test) +
       fill = `Single Dosed`
     )
   ) + coord_map() + scale_fill_viridis(option = "magma") +
-  labs(fill = "Census")
+  labs(fill = "Census") + ggtitle(paste(test$Date))
