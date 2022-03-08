@@ -1,5 +1,3 @@
-library(dplyr)
-
 load_agg_table <- read.csv("https://github.com/info-201a-wi22/final-project-starter-info/raw/main/data/covid-vaccination-vs-death_ratio.csv")
 
 earlycountries <- 

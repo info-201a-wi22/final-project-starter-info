@@ -28,11 +28,19 @@ report_page <- tabPanel("Report",
   
   h3("Our Process"),
   
-  p("Under Construction"),
-  
-  # p() putting more text here
-  DT::dataTableOutput("agg_table"),
-  # putting more text here
+  tabsetPanel(
+    tabPanel("Index", br(), br(),
+      p(index.rmd_report) # please add to this, I just created the variable
+    ),
+    
+    tabPanel("Aggregate Table", br(), br(),
+      p(agg_table_report1),
+      br(),
+      DT::dataTableOutput("agg_table"),
+      br(),
+      p(agg_table_report2)
+    )
+  )
 )
 
 
@@ -88,10 +96,18 @@ interactive_page_2 <- tabPanel("Getting Vaccinated",
         
         # The maximum allowed date. Either a Date object, or a string in yyyy-mm-dd format.
         max = as.character(max(General_Population$Date)) 
-      )
+      ),
+      
+      br(),
+      
+      p(int2_helptext)
     ),
     
-    mainPanel(plotlyOutput("genpop"))
+    mainPanel(
+      plotlyOutput("genpop"),
+      br(),
+      p(int2_description)
+    )
   )
  
 )
