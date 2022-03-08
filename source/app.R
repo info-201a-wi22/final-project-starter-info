@@ -5,7 +5,6 @@ p_load(
   data.table, mapdata, ggmap, maps, viridis, DT, plotly,
 )
 
-# setwd("C:/Users/ebaca/Desktop/School/final-project-starter-info/source")
 source("interactive_1.R")
 source("interactive_2.R")
 source("../docs/Exploratory_Analysis_SecondChart.R")
