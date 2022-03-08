@@ -4,9 +4,30 @@ server <- function(input, output, session){
   # ---------- INTERACTIVE PAGE 1 ----------
   
   # ---------- INTERACTIVE PAGE 2 ----------
+  genpop_selector <- reactive({
+    req(input$vax_status_selector)
+    req(input$date_selector)
+    
+    validate(
+      need(input$vax_status_selector != "Select", "Please select a vaccination status.")
+    )
+    
+    General_Population %>%
+      filter(Date == as.Date(input$date_selector))# %>%
+      #select(Date, State, lat, long, group, as.name(input$vax_status_selector))
+  })
+  
   output$genpop <- renderPlotly({
-    render <- create_map(input$date, input$vax_status)
-    return(render)
+    ggplot(genpop_selector()) +
+      geom_polygon(
+        mapping = aes(
+          x = long,
+          y = lat,
+          group = group,
+          fill = input$vax_status_selector
+        )
+      ) + coord_map() + scale_fill_viridis(option = "viridis") +
+      labs(fill = "Population")
   })
   
   # ---------- SUMMARY PAGE ----------
