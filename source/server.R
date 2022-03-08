@@ -20,7 +20,7 @@ server <- function(input, output, session){
           x = long,
           y = lat,
           group = group,
-          fill = .data[[input$vax_status_selector]] # call data frame column that matches input
+          fill = .data[[input$vax_status_selector]] # pass string input as data frame column name
         )
       ) + coord_map() + scale_fill_viridis(option = "magma") +
       labs(fill = "Census") +

@@ -1,4 +1,4 @@
-setwd("C:/Users/ebaca/Desktop/School/final-project-starter-info/docs")
+setwd("C:/Users/ebaca/Desktop/School/final-project-starter-info/source")
 
 library(pacman) # <- for loading multiple libraries at once
 
@@ -7,6 +7,7 @@ p_load(
   data.table, mapdata, ggmap, maps, viridis, DT, plotly
 )
 
+source("../docs/Exploratory_Analysis_SecondChart.R")
 source("interactive_2.R")
 
 # source these last:
