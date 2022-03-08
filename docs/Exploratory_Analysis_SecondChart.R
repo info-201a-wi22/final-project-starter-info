@@ -1,11 +1,13 @@
 library(dplyr)
 library(ggplot2)
+
 data <- read.csv("https://data.cdc.gov/api/views/8xkx-amqh/rows.csv?accessType=DOWNLOAD&bom=true&format=true")
 View(data)
 colnames(data)[1] <- "Date"
 data$date <- as.Date(data$Date, "%m/%d/%Y")
 data$date
 class(data$date)
+
 recentdata <-
   data %>%
   filter(date == (max(date))) %>%

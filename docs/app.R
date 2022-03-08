@@ -6,6 +6,9 @@ p_load(
 )
 
 source("interactive_2.R")
+source("Exploratory_Analysis_SecondChart.R")
+
+# source these last:
 source("server.R")
 source("ui.R")
 
