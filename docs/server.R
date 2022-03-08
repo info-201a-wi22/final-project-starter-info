@@ -30,6 +30,10 @@ server <- function(input, output, session){
       labs(fill = "Population")
   })
   
+  # FIX: 
+  # Warning: Error in : Aesthetics must be either length 1 
+  # or the same as the data (1): x, y and group
+  
   # ---------- SUMMARY PAGE ----------
   
   # ---------- REPORT PAGE ----------
