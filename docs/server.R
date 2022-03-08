@@ -13,8 +13,7 @@ server <- function(input, output, session){
     )
     
     General_Population %>%
-      filter(Date == as.Date(input$date_selector))# %>%
-      #select(Date, State, lat, long, group, as.name(input$vax_status_selector))
+      filter(Date == as.Date(input$date_selector))
   })
   
   output$genpop <- renderPlotly({
@@ -29,6 +28,10 @@ server <- function(input, output, session){
       ) + coord_map() + scale_fill_viridis(option = "viridis") +
       labs(fill = "Population")
   })
+  
+  # FIX: 
+  # Warning: Error in : Aesthetics must be either length 1 
+  # or the same as the data (1): x, y and group
   
   # ---------- SUMMARY PAGE ----------
   
