@@ -32,20 +32,3 @@ General_Population <-
   ) %>%
   right_join(state_coords, by = "State")
 
-
-
-# ---- TESTING ----
-test <- 
-  General_Population %>%
-  filter(Date == max(General_Population$Date))
-
-ggplot(test) +
-  geom_polygon(
-    mapping = aes(
-      x = long,
-      y = lat,
-      group = group,
-      fill = `Single Dosed`
-    )
-  ) + coord_map() + scale_fill_viridis(option = "magma") +
-  labs(fill = "Census") + ggtitle(paste(test$Date))
