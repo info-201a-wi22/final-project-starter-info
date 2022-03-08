@@ -4,7 +4,9 @@
 data_int2 <- 
   read.csv("https://data.cdc.gov/api/views/unsk-b7fc/rows.csv?accessType=DOWNLOAD&bom=true&format=true") %>%
   rename(Date = ï..Date)
-data_int2$Date <- as.Date(data_int2$Date, "%m/%d/%Y") # setting compatible format for dateInput()
+# setting compatible format for dateInput():
+data_int2$Date <- as.Date(data_int2$Date, "%m/%d/%Y") 
+
 
 ## --- Getting ggplot data for map of U.S. states
 state_coords <- 
@@ -21,6 +23,7 @@ state_coords[state_coords$name == "virginia", "State"] <- "VA"
 state_coords[state_coords$name == "washington", "State"] <- "WA"
 
 
+
 # ---- Preparing Data Set For ggplot ----
 General_Population <- 
   data_int2 %>%
@@ -28,14 +31,15 @@ General_Population <-
     Date,
     State = Location, 
     # surrounding spaced words with back tick so it's passed as an object:
+    # (I put spaces because it looks cleaner for display)
     `Total Distributed` = as.numeric(gsub(",", "", Distributed)),
     `Total Administered` = as.numeric(gsub(",", "", Administered)),
     `Single Dosed` = as.numeric(gsub(",", "", Administered_Dose1_Recip)),
     `Fully Vaccinated` = as.numeric(gsub(",", "", Series_Complete_Yes)),
     Boosted = as.numeric(gsub(",", "", Additional_Doses))
     
-    # as.numeric(gsub(argument)) removes commas (prevents number conversion error) 
-    # & converts class character to numeric
+    # as.numeric(gsub(x)) removes commas (preventing number conversion error)
+    # and then converts class character to numeric
   ) %>%
   right_join(state_coords, by = "State")
 
