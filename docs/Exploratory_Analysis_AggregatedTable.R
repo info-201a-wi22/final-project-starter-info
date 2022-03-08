@@ -1,11 +1,9 @@
 library(dplyr)
 
-data <- read.csv("https://github.com/info-201a-wi22/final-project-starter-info/raw/main/data/covid-vaccination-vs-death_ratio.csv")
-
-View(data)
+load_agg_table <- read.csv("https://github.com/info-201a-wi22/final-project-starter-info/raw/main/data/covid-vaccination-vs-death_ratio.csv")
 
 earlycountries <- 
-  data %>%
+  load_agg_table %>%
   group_by(country) %>%
   filter(date == min(date)) %>%
   summarize(
@@ -18,7 +16,7 @@ earlycountries <-
   rename(early_date = date)
 
 latecountries <- 
-  data %>%
+  load_agg_table %>%
   group_by(country) %>%
   filter(date == max(date)) %>%
   summarize(
@@ -30,7 +28,7 @@ latecountries <-
   ) %>%
   rename(recent_date = date)
 
-compare <- 
+compare_agg_table <- 
   left_join(latecountries, earlycountries, by = "country") %>%
   mutate(
     time_passed = as.Date(recent_date) - as.Date(early_date),
@@ -47,7 +45,7 @@ compare <-
     death_change,
     ratio_diff
     )
-View(compare)
+View(compare_agg_table)
 
 us_info <- compare[(compare$country == "United States of America"), ]
 us_info

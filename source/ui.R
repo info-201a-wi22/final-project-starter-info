@@ -1,7 +1,10 @@
 
 # Note: pages are individually built starting with tabPanel() which will be combined 
 # into fluid UI page on the bottom, please keep format to avoid confusion. Load the
-# app to visualize.
+# app to visualize. I'm also planning to separate out longer, non-coding paragraphs
+# into a separate document (then calling them via variables) so that the files are 
+# cleaner & the code is easier to read. That file will be located in the docs folder
+# as shiny_paragraphs.R
 
 # ---------- INTRODUCTORY PAGE ----------
 introductory_page <- tabPanel("Introduction",
@@ -21,11 +24,15 @@ report_page <- tabPanel("Report",
   # Report page.  Iterate on your P01 and P02 to present your final report. See below.  
   # The key goal: Write a concise, clear, and interesting summary of your project. 
   
-  # Put index.rmd file, Exploratory Analysis Charts, Aggregate Table, etc
+  # Put index.rmd file & aggregate table
   
   h3("Our Process"),
   
-  p("Under Construction")
+  p("Under Construction"),
+  
+  # putting more text here
+  DT::dataTableOutput("agg_table"),
+  # putting more text here
 )
 
 
@@ -35,6 +42,8 @@ summary_page <- tabPanel("Summary",
   # project (which should be related to a specific aspect of your analysis). Feel free 
   # to incorporate tables, graphics, or other elements to convey these conclusions. 
   # The key goal: Present the key takeaways for your audience.
+  
+  # put exploratory analysis charts
 
   h3("Major Takeaways"),
   

@@ -6,11 +6,13 @@ p_load(
 )
 
 # setwd("C:/Users/ebaca/Desktop/School/final-project-starter-info/source")
-source("../docs/Exploratory_Analysis_SecondChart.R")
 source("interactive_1.R")
 source("interactive_2.R")
+source("../docs/Exploratory_Analysis_SecondChart.R")
+source("../docs/shiny_paragraphs.R")
 
-# source these last:
+
+# source these last (or there will be errors):
 source("server.R")
 source("ui.R")
 
