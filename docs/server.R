@@ -20,15 +20,13 @@ server <- function(input, output, session){
           x = long,
           y = lat,
           group = group,
-          fill = .data[[input$vax_status_selector]]
+          fill = .data[[input$vax_status_selector]] # call data frame column that matches input
         )
       ) + coord_map() + scale_fill_viridis(option = "magma") +
       labs(fill = "Census") +
       ggtitle(paste(input$vax_status_selector, "Population For", input$date_selector))
   })
   
-  # FIX: 
-  # Warning: Error in : Discrete value supplied to continuous scale
   
   # ---------- SUMMARY PAGE ----------
   
