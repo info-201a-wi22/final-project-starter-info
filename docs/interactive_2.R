@@ -11,21 +11,12 @@ General_Population <-
   summarize(
     Date,
     State = Location, 
-    `Total Distributed` = Distributed,
-    `Total Administered` = Administered,
-    `Single Dose` = Administered_Dose1_Recip,
-    `Full Vaccination` = Series_Complete_Yes,
-    Booster = Additional_Doses
+    `Total Distributed` = as.numeric(str_replace(Distributed, ",", "")),
+    `Total Administered` = as.numeric(str_replace(Administered, ",", "")),
+    `Single Dose` = as.numeric(str_replace(Administered_Dose1_Recip, ",", "")),
+    `Full Vaccination` = as.numeric(str_replace(Series_Complete_Yes, ",", "")),
+    Booster = as.numeric(str_replace(Additional_Doses, ",", ""))
   )
-General_Population$`Single Dose` <- 
-  as.numeric(str_replace(General_Population$`Single Dose`, ",", ""))
-
-General_Population$`Full Vaccination` <- 
-  as.numeric(str_replace(General_Population$`Full Vaccination`, ",", ""))
-
-General_Population$Booster <- 
-  as.numeric(str_replace(General_Population$Booster, ",", ""))
-
 
 state_coords <- 
   map_data("state") %>%
