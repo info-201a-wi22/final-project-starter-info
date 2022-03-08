@@ -16,7 +16,7 @@ report_page <- tabPanel("Report",
   # Report page.  Iterate on your P01 and P02 to present your final report. See below.  
   # The key goal: Write a concise, clear, and interesting summary of your project. 
   
-  # Put index.rmd file here
+  # Put index.rmd file here, Exploratory Analysis Charts 
   
   h3("Our Process"),
   
