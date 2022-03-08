@@ -75,14 +75,15 @@ interactive_page_2 <- tabPanel("Getting Vaccinated",
   fluidPage(
     column(4, 
       selectInput("vax_status_selector", "Select a Vaccination Status",
-        choices = c("Select", "1+ Dose", "Full Vaccination", "Booster"),
+        choices = c("Select", "Single Dose", "Full Vaccination", "Booster"),
         selected = "Select"
       ),
       
       dateInput("date_selector", "Select a Date",
         value = max(General_Population$Date),
         min = min(General_Population$Date),
-        max = max(General_Population$Date)
+        max = max(General_Population$Date),
+        format = "mm/dd/yyyy"
       )
     ),
     
