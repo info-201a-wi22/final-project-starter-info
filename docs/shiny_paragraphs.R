@@ -3,7 +3,7 @@
 
 
 # ---------- REPORT PAGE ----------
-index.rmd_report <- "Quote from index here"
+index.rmd_report <- "Substitute this with stuff from index.rmd"
 
 
 agg_table_report1 <- "     Our aggregate table is pulled from a dataset on Kaggle that combines three
