@@ -20,13 +20,9 @@ server <- function(input, output, session){
   
   # ---------- SUMMARY PAGE ----------
   # Analysis Chart 1:
-  dataset %>%
-    filter(country == "United States of America") %>%
-    ggplot(aes(x = date, y = New_deaths, colour = country))+
-    geom_point(size = 5, alpha = 0.2)+
-    geom_line(size = 1)+
-    theme_minimal()+
-    labs(title = "COVID Fatalities in The US")
+  output$analysis_1 <- renderPlotly({
+    anch1_chart
+  })
   
   # Analysis Chart 2:
   chart2_state_selector <- reactive({
@@ -48,12 +44,12 @@ server <- function(input, output, session){
   
   output$analysis_2 <- renderPlotly({
     ggplot(chart2_state_selector(),
-           aes(
-             x = date,
-             y = Census,
-             group = `Case Type`,
-             color = `Case Type`
-           )
+      aes(
+        x = date,
+        y = Census,
+        group = `Case Type`,
+        color = `Case Type`
+      )
     ) + geom_line(size = 0.6) + 
       scale_color_manual(values = c(
         "royalblue4", "orangered", "darkgoldenrod1", 

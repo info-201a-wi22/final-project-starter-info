@@ -78,20 +78,12 @@ summary_page <- tabPanel("Summary",
     ), 
     
     tabPanel("Analysis Chart 1",
-     fluidPage(
-       column(4, br(),
-          selectInput("anch2_state", "Select a Country",
-            choices = c("Select", dataset$country),
-            selected = "Select"
-          )
-        ),
-       
-       mainPanel(
-         withSpinner(plotlyOutput("analysis_1"), type = 5),
-         br(),
-         p("This chart represents the amount of fatalities that have occured during the pandemic"),
-        ) 
-      )
+      fluidPage(
+        br(),
+        withSpinner(plotlyOutput("analysis_1"), type = 5),
+        br(),
+        p("This chart represents the amount of fatalities that have occured during the pandemic"),
+      ) 
     ),
     
     tabPanel("Analysis Chart 2",
