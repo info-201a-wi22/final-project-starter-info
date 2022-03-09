@@ -34,11 +34,16 @@ report_page <- tabPanel("Report",
     ),
     
     tabPanel("Aggregate Table", br(), br(),
-      p(agg_table_report1),
-      br(),
+      p(agg_table_report1), br(),
+      p(agg_table_report2), br(), br(),
       DT::dataTableOutput("agg_table"),
       br(),
-      p(agg_table_report2)
+      br(),
+      p(agg_table_report3), br(),
+      p(agg_table_report4), br(),
+      p(agg_table_report5), 
+      br(), 
+      br()
     )
   )
 )

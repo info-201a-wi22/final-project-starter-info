@@ -1,10 +1,10 @@
-# for line breaks, do `\n`
 
 # ---------- INTRODUCTORY PAGE ----------
 
 
 # ---------- REPORT PAGE ----------
 index.rmd_report <- "Quote from index here"
+
 
 agg_table_report1 <- "     Our aggregate table is pulled from a dataset on Kaggle that combines three
 datasets, one of which is made by the World Health Organization. This table summarizes the changes
@@ -14,16 +14,27 @@ full year. By columns, the table takes into account total vaccine doses distribu
 who got at least one dose, individuals who completed the series, daily deaths, the total 
 population in that country, and the percentage of vaccinated individuals in their respective 
 country's population. The numbers in the aggregate table are the differences in those values, 
-subtracting the numbers of the first date from the numbers of the most recent date. \n 
-     Between 2021-01-24 and 2021-12-25, the country of Malta experienced the biggest change, 
-meaning that they were able to vaccinate 95% more individuals in that time frame. They also saw a 
-decrease in deaths, with a difference of 3 less people. In 335 days, Malta was able to vaccinate 
-1,011,312 more people. \n
-     India resides at the top for getting the most vaccinations administered, with a record of 
-1,406,679,149 more vaccinated individuals within 316 days. That's 59% more of their population
-vaccinated between 2021-02-13 and 2021-12-26."
+subtracting the numbers of the first date from the numbers of the most recent date." 
 
-agg_table_report2 <- "Describle U.S. numbers here"
+agg_table_report2 <- "Explore some of these statistics below." 
+
+agg_table_report3 <- "     Between 2021-01-24 and 2021-12-25, the country of Malta experienced the 
+biggest change, meaning that they were able to vaccinate 95% more individuals in that time frame. 
+They also saw a decrease in deaths, with a difference of 3 less people. In 335 days, Malta was 
+able to vaccinate 1,011,312 more people."
+
+agg_table_report4 <- "     India resides at the top for getting the most vaccinations administered, 
+with a record of 1,406,679,149 more vaccinated individuals within 316 days. That's 59% more of 
+their population vaccinated between 2021-02-13 and 2021-12-26, and their death count only 
+increased by 59. Russia, however, saw a huge increase in deaths, losing 540 individuals to COVID-19 
+in just below 300 days. Although, Russia was also able to come in 10th highest for newly vaccinated 
+individuals from 2021-03-02 to 2021-12-25, overall increasing their vaccinated percentage by 47%."
+
+agg_table_report5 <- "     Behind India, the U.S. comes in second for highest increase in vaccinations. 
+On 2020-12-13 through 2021-12-23, the U.S. was able to vaccinate 500,198,183 individuals. They also 
+experienced the third lowest changes in death, decreasing by 1,025 individuals. As for the total 
+percentage of individuals that are vaccinated in the population, the U.S. was able to get 72% more 
+doses administered, leaving them at 37th for highest increases in percent."
 
 
 # ---------- SUMMARY PAGE ----------

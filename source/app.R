@@ -5,6 +5,7 @@ p_load(
   data.table, mapdata, ggmap, maps, viridis, DT, plotly
 )
 
+# set working directory to source folder
 source("interactive_1.R")
 source("interactive_2.R")
 source("../docs/Exploratory_Analysis_AggregatedTable.R")
