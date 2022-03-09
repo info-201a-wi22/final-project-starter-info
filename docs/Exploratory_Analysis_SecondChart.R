@@ -82,7 +82,6 @@ gif_chart2_cases <-
   animate(
     plot_chart2_cases, 
     fps = 5, 
-    height = 1098, width = 1560, 
     end_pause = 2
   )
 
