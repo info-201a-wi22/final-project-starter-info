@@ -9,6 +9,9 @@ server <- function(input, output, session){
   
   
   # ---------- SUMMARY PAGE ----------
+  output$analysis_2 <- renderPlotly({
+    
+  })
   
   
   # ---------- INTERACTIVE PAGE 1 ----------
