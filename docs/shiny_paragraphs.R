@@ -35,10 +35,10 @@ States’ lowest vaccinated states to enact change as deaths from the virus are 
 expansion of free or affordable COVID-19 vaccines that are made accessible to the general public."
 
 research_questions <- "Our teams questions:
-- How much of an impact do vaccines create on public health in the U.S.?
-- Have vaccinations helped the mortality rate of COVID-19 go down?
-- Are a majority of the population in countries fully vaxxed?
-- As the amount of new deaths were rising, were more people willing to get vaccinated?"
+How much of an impact do vaccines create on public health in the U.S.?
+Have vaccinations helped the mortality rate of COVID-19 go down?
+Are a majority of the population in countries fully vaxxed?
+As the amount of new deaths were rising, were more people willing to get vaccinated?"
 
 data_set <- "The dataset we have chosen to use for our project _The Impact of Vaccines_, compares the [covid-19 vaccination rate vs the mortality rate across the world]
 (https://www.kaggle.com/sinakaraji/covid-vaccination-vs-death). This set of data has 15,803 views, 2,758 downloads, and 34 contributors. The top contributing
@@ -136,10 +136,11 @@ the pandemic had first officially started up until now. Looking at it you are ab
 had finally been released to the public that there was a major dip in new fatalities, it had only gone back up recently 
 with the new variants that have been coming."
 
-summary_takeaways3 <- "The second chart that was created highlights different aspects of vaccination statuses across the country.
-It includes the amount of single dosed, fully vaccinated, and boosted individuals ranging from a various amount of ages. The general
-trend that we were able to witness is that the more vaccinated people their are, the more it will be less likely to have a 
-new fatality caused by covid."
+summary_takeaways3 <- "The second chart that was created highlights the numbers of distributed and administered vaccines.
+Compared with the fatalaties in the first chart, the correlation between the two shows the effectiveness of the vaccine,
+and how it can help prevent the spread. The number of distributed doses is the sum of the doses each state is alotted, 
+while the amount administered is the total number of doses recieved by a patient. As those two numbers go up, the number
+of fatalities in the first chart goes down."
 
 
 # ---------- INTERACTIVE PAGE 1 ----------

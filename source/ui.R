@@ -94,7 +94,7 @@ summary_page <- tabPanel("Summary",
         br(),
         withSpinner(plotlyOutput("analysis_2"), type = 7),
         br(),
-        p("Insert description here")
+        p("This chart shows the total number of doses distributed and administered in the U.S.")
       )
     )
   )
