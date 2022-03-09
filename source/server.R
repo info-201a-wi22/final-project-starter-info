@@ -1,7 +1,18 @@
 server <- function(input, output, session){
   # ---------- INTRODUCTORY PAGE ----------
   
+  
+  # ---------- REPORT PAGE ----------
+  output$agg_table <- DT::renderDataTable({
+    DT::datatable(compare_agg_table)
+  })
+  
+  
+  # ---------- SUMMARY PAGE ----------
+  
+  
   # ---------- INTERACTIVE PAGE 1 ----------
+  
   
   # ---------- INTERACTIVE PAGE 2 ----------
   # creating reactive function that will change with user input:
@@ -33,14 +44,4 @@ server <- function(input, output, session){
       labs(fill = "Census") +
       ggtitle(paste(input$vax_status_selector, "Population For", input$date_selector))
   })
-  
-  
-  # ---------- REPORT PAGE ----------
-  output$agg_table <- DT::renderDataTable({
-    DT::datatable(compare_agg_table)
-  })
-  
-  
-  # ---------- SUMMARY PAGE ----------
-  
 }

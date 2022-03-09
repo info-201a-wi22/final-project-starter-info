@@ -43,7 +43,6 @@ compare_agg_table <-
     death_change,
     ratio_diff
     )
-View(compare_agg_table)
 
 us_info <- compare_agg_table[(compare_agg_table$country == "United States of America"), ]
 us_info

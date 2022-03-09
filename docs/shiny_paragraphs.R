@@ -5,6 +5,7 @@
 # ---------- REPORT PAGE ----------
 index.rmd_report <- "Quote from index here"
 
+
 agg_table_report1 <- "     Our aggregate table is pulled from a dataset on Kaggle that combines three
 datasets, one of which is made by the World Health Organization. This table summarizes the changes
 in statistical numbers during COVID-19 in each country, filering out rows of data from the first
