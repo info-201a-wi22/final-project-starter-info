@@ -66,7 +66,7 @@ summary_page <- tabPanel("Summary",
   
   tabsetPanel(
     tabPanel("Takeaways",
-      
+      p("Insert summary/takeaways here (replace this text with variable for paragraphs")
     ),
     
     tabPanel("Analysis Chart 1",
