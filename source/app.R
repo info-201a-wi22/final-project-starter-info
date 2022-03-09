@@ -1,4 +1,9 @@
-library(pacman) # <- for loading multiple libraries at once
+# TO RUN SHINY APP, DO THESE STEPS FIRST:
+# 1) set working directory to the "Source" folder
+# 2) install.packages("pacman") (if you don't have it installed already)
+# 3) run all lines of code in "app.R" file
+
+library(pacman)
 
 p_load(
   rsconnect, dplyr, ggplot2, shiny, reshape2, tidyverse,
@@ -6,7 +11,6 @@ p_load(
   gganimate, gifski
 )
 
-# set working directory to "Source" folder
 source("interactive_2.R")
 source("../docs/Exploratory_Analysis_AggregatedTable.R")
 source("../docs/Exploratory_Analysis_FirstChart.R")
@@ -20,3 +24,4 @@ source("server.R")
 source("ui.R")
 
 shinyApp(ui = ui, server = server)
+

@@ -1,3 +1,8 @@
+# TO RUN SHINY APP, DO THESE STEPS FIRST:
+# 1) set working directory to the "Source" folder
+# 2) install.packages("pacman") (if you don't have it installed already)
+# 3) run all lines of code in "app.R" file
+
 # ------ DELETING LATER, PLEASE READ:
 # This is for functions only, all UI goes in ui.R file. (please see ui note)
 
@@ -14,6 +19,10 @@ server <- function(input, output, session){
   
   
   # ---------- SUMMARY PAGE ----------
+  # Analysis Chart 1:
+  
+  
+  # Analysis Chart 2:
   chart2_state_selector <- reactive({
     validate(need(input$anch2_state != "Select", "Please select a state."))
     
@@ -50,25 +59,25 @@ server <- function(input, output, session){
   
   
   # ---------- INTERACTIVE PAGE 1 ----------
-  detect_selector_casedeath <- reactive({
-    validate(need(input$case_or_death != "Select", "Please select a statistic."))
-  })
-  
   output$int1cases_int <- renderPlotly({
     plot_int1_cases
   })
   
-  output$int1cases_gif <- renderPlot({
-    gif_int1_cases
-  })
+  output$int1cases_gif <- renderImage({
+    # rendering gganimate GIF to be embeddable
+    anim_save("outfile_cases.gif", gif_int1_cases)
+    list(src = "outfile_cases.gif", contentType = 'image/gif')
+  }, deleteFile = TRUE)
+  
   
   output$int1deaths_int <- renderPlotly({
     plot_int1_deaths
   })
   
-  output$int1deaths_gif <- renderPlot({
-    gif_int1_deaths
-  })
+  output$int1deaths_gif <- renderImage({
+    anim_save("outfile_deaths.gif", gif_int1_deaths)
+    list(src = "outfile_deaths.gif", contentType = 'image/gif')
+  }, deleteFile = TRUE)
   
   
   # ---------- INTERACTIVE PAGE 2 ----------

@@ -1,37 +1,37 @@
+# TO RUN SHINY APP, DO THESE STEPS FIRST:
+# 1) set working directory to the "Source" folder
+# 2) install.packages("pacman") (if you don't have it installed already)
+# 3) run all lines of code in "app.R" file
+
 # ------ DELETING LATER, PLEASE READ ALL:
 # Note: pages are individually built starting with tabPanel() which will be combined 
 # into fluid UI page on the bottom, please keep format to avoid confusion. Load the
 # app to visualize (run the full app.R file & it should open). 
 
-# ALSO: PLEASE PUT LONGER PARAGRAPHS IN "shiny_paragraphs.R" FILE TO MAINTAIN CLEANLINESS
-# OF CODING 
+# PLEASE PUT LONGER PARAGRAPHS IN "shiny_paragraphs.R" FILE TO MAINTAIN CLEANLINESS OF CODING 
 # THANKS
 
 # please read ALL COMMENTS within code as well.
 
 # ---------- INTRODUCTORY PAGE ----------
-introductory_page <- tabPanel(
-  "Introduction", 
+introductory_page <- tabPanel("Introduction", 
+
   titlePanel("Project Introduction: the Impact of Vaccines"),
+  
   HTML('<center><img src = "https://health.clevelandclinic.org/wp-content/uploads/sites/3/2021/07/jjVaccine-guillameBr-1285072572-770x533-1.jpg" width = "500"></center>'),
-  p("Project Vax describes the impact of vaccinations on public health through datasets gathered from (datasets). 
-       The dataset(s) we are analyzing shows us the rate of vaccinations throughout the world and the mortality rate among 
-       those vaccinated and unvaccinated due to COVID-19. Our group was interested in exploring the effectiveness the COVID-19 
-       vaccines have on public health  whether the statistics support or oppose the use of the COVID-19 vaccines in the fight 
-       against the virus and its variants. The outbreak of the COVID-19 pandemic has greatly disrupted modern life for the past few years. 
-       These vaccines can be the key to normality in the near future."),
-  p("The dataset(s) we are analyzing shows us the rate of vaccinations across the United States and the infection/mortality rate among 
-    those vaccinated and unvaccinated due to COVID-19. Our group is interested in exploring the effectiveness of the COVID-19 vaccines 
-    and how the data either supports or opposes the current iterations of the COVID-19 vaccines in the fight against the virus and its variants. 
-    The outbreak of the Coronavirus vaccine has greatly disrupted modern life the past few years and these vaccines can be the key to normality within the near future.")
+  br(), br(),
+  
+  p(introductionp1),
+  p(introductionp2),
+  
+  br(), br()
 )
 
 # ---------- REPORT PAGE ----------
 report_page <- tabPanel("Report",
   
-  # PLS FINISH INDEX TAB PANEL AND PUT PARAGRAPH UNDER VARIABLE index.rmd_report
-  # IN shiny_paragraphs.R FILE 
-  # IF MORE THAN 1 PARAGRAPH IS NECESSARY, PUT EACH PARAGRAPH UNDER A VARIABLE,
+  # PLS FINISH INDEX TAB PANEL AND PUT PARAGRAPH UNDER VARIABLE index.rmd_report IN shiny_paragraphs.R FILE 
+  # IF MORE THAN 1 PARAGRAPH IS NECESSARY, PUT EACH PARAGRAPH UNDER A VARIABLE-
   # SHINY DOES NOT AUTOMATICALLY ACCOUNT FOR LINE BREAKS
   
   h3("Our Process"), br(),
@@ -42,13 +42,14 @@ report_page <- tabPanel("Report",
     ),
     
     tabPanel("Aggregate Table", br(), br(),
-      p(agg_table_report1), br(),
+      p(agg_table_report1),
       p(agg_table_report2), br(), br(),
       DT::dataTableOutput("agg_table"),
       br(),
       br(),
-      p(agg_table_report3), br(),
-      p(agg_table_report4), br(),
+      # separating into paragraphs:
+      p(agg_table_report3),
+      p(agg_table_report4),
       p(agg_table_report5), 
       br(), 
       br()
@@ -66,16 +67,18 @@ summary_page <- tabPanel("Summary",
   
   tabsetPanel(
     tabPanel("Takeaways",
-      p("Insert summary/takeaways here (replace this text with variable for paragraphs")
+      br(),
+      p("Insert summary/takeaways here (replace this text with variable for paragraphs)")
     ),
     
     tabPanel("Analysis Chart 1",
-      # jayden, check the rubric for p02 - samuel left some comments
+      br(),
+      p("jayden please insert your chart here & any description necessary")
     ),
     
     tabPanel("Analysis Chart 2",
       fluidPage(
-        column(4,
+        column(4, br(),
           selectInput("anch2_state", "Select a State",
             choices = c("Select", unique(data_chart2$state)),
             selected = "Select"
@@ -85,7 +88,7 @@ summary_page <- tabPanel("Summary",
         mainPanel(
           plotlyOutput("analysis_2"),
           br(),
-          p()
+          p("Insert description here")
         )
       )
     )
@@ -96,45 +99,34 @@ summary_page <- tabPanel("Summary",
 # ---------- INTERACTIVE PAGE 1 ----------
 interactive_page_1 <- tabPanel("Counting Cases",
 
-  h3("Cases/Deaths in the U.S."),
+  h3("Cases & Deaths in the U.S."),
   br(),
   
   fluidPage(
-    column(4, 
-      selectInput("case_or_death", "COVID-19 Statistics",
-        choices = c("Select", "Cases", "Deaths"),
-        selected = "Select"
-      ),
-      
-      radioButtons("intorgif", "Choose display type",
-        choices = c("Interactive", "GIF"),
-        selected = "Interactive"
+    column(2, 
+      radioButtons("case_or_death", "Select a statistic type",
+        choices = c("Cases", "Deaths")
       )
     ),
     
     mainPanel(
       conditionalPanel(
-        condition = "input.intorgif == 'Interactive' && input.case_or_death == 'Cases'",
-        plotlyOutput("int1cases_int")
+        condition = "input.case_or_death === 'Cases'",
+        fluidRow(
+          column(8, plotlyOutput("int1cases_int")),
+          column(4, imageOutput("int1cases_gif"))
+        )
       ),
       
       conditionalPanel(
-        conditon = "input.intorgif == 'GIF' && input.case_or_death == 'Cases'",
-        plotOutput("int1cases_gif")
-      ),
-      
-      conditionalPanel(
-        condition = "input.intorgif == 'Interactive' && input.case_or_death == 'Deaths'",
-        plotlyOutput("int1deaths_int")
-      ),
-      
-      conditionalPanel(
-        condition = "input.intorgif == 'GIF' && input.case_or_death == 'Deaths'",
-        plotOutput("gif_int1_deaths")
+        condition = "input.case_or_death === 'Deaths'",
+        fluidRow(
+          column(8, plotlyOutput("int1deaths_int")),
+          column(4, imageOutput("int1deaths_gif"))
+        )
       )
     )
   )
-  
 )
 
 
@@ -174,7 +166,6 @@ interactive_page_2 <- tabPanel("Getting Vaccinated",
       p(int2_description)
     )
   )
- 
 )
 
 
