@@ -10,6 +10,7 @@ p_load(
 source("interactive_1.R")
 source("interactive_2.R")
 source("../docs/Exploratory_Analysis_AggregatedTable.R")
+source("../docs/Exploratory_Analysis_SecondChart.R")
 source("../docs/shiny_paragraphs.R")
 
 

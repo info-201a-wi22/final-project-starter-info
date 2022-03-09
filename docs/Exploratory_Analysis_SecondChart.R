@@ -1,5 +1,3 @@
-library(dplyr)
-library(ggplot2)
 
 data_chart2 <- 
   read.csv("https://data.cdc.gov/api/views/9mfq-cb36/rows.csv?accessType=DOWNLOAD") %>%
@@ -7,12 +5,29 @@ data_chart2 <-
   subset(select = -c(created_at, consent_cases, consent_deaths))
 data_chart2$date <- as.Date(data_chart2$date, "%m/%d/%Y")
 
-View(data_chart2)
+melted_chart2 <- 
+  reshape2::melt(data_chart2, id = c("date", "state")) %>%
+  rename(
+    count_type = variable,
+    consensus = value
+  ) %>% arrange(count_type)
 
-recentdata <- data_chart2 %>% filter(date == (max(date)))
-View(recentdata)
+ggplot(
+  melted_chart2,
+  aes(
+    x = date,
+    y = consensus,
+    group = count_type,
+    color = count_type
+  )
+) + geom_line()
 
 
+
+
+
+
+# DISREGARD:
 # ---------- OLD CHART ----------
 #data_chart2 <- read.csv("https://data.cdc.gov/api/views/8xkx-amqh/rows.csv?accessType=DOWNLOAD&bom=true&format=true")
 #View(data_chart2)
