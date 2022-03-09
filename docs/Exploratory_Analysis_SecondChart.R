@@ -1,9 +1,15 @@
 
 data_chart2 <- 
   read.csv("https://data.cdc.gov/api/views/9mfq-cb36/rows.csv?accessType=DOWNLOAD") %>%
-  rename(date = submission_date) %>%
+  rename(
+    date = submission_date,
+    State = state
+  ) %>%
   subset(select = -c(created_at, consent_cases, consent_deaths))
 data_chart2$date <- as.Date(data_chart2$date, "%m/%d/%Y")
+
+View(data_chart2)
+sdf
 
 # ---- Comparing Cases ----
 ## creating dataframe:
@@ -85,11 +91,24 @@ gif_chart2_deaths <-
     end_pause = 2
   )
 
+#------
+
+data_state_grid <- 
+  semi_join(data_chart2, state_coords, by = "State") %>%
+  group_by(date) %>%
+  summarize(
+    `Total Cases` = sum(tot_cases, na.rm = TRUE),
+    `Confirmed Cases` = sum(conf_cases, na.rm = TRUE),
+    `New Cases` = sum(new_case, na.rm = TRUE),
+    `Total Deaths` = sum(tot_death, na.rm = TRUE),
+    `Confirmed Deaths` = sum(conf_death, na.rm = TRUE),
+    `New Deaths` = sum(new_death, na.rm = TRUE)
+  ) %>%
+  reshape2::melt(id = c("date", "State"))
+View(data_state_grid)
 
 
-
-# DISREGARD:
-# ---------- OLD CHART ----------
+# ---------- DISREGARD: OLD CHART ----------
 #data_chart2 <- read.csv("https://data.cdc.gov/api/views/8xkx-amqh/rows.csv?accessType=DOWNLOAD&bom=true&format=true")
 #View(data_chart2)
 #colnames(data_chart2)[1] <- "Date"
