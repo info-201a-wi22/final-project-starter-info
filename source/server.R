@@ -1,6 +1,6 @@
 server <- function(input, output, session){
   # ---------- INTRODUCTORY PAGE ----------
-  intro_view <- tabPanel(
+  introductory_page <- tabPanel(
     "Introduction", 
     titlePanel("Project Introduction: the Impact of Vaccines"),
     HTML('<center><img src = "https://github.com/info-201a-wi22/final-project-starter-info/blob/9d960dbb4146f8b3dd06e2c8fc195ad3d427b521/Visualization%20for%20Intro.png" width = "500"></center>'),

@@ -7,17 +7,21 @@
 # That file will be located in the docs folder as shiny_paragraphs.R
 
 # ---------- INTRODUCTORY PAGE ----------
-introductory_page <- tabPanel("Introduction",
-  # An introductory page.  This page should provide a brief overview of your project: 
-  # What major questions are you seeking to answer and what data will you use to answer 
-  # those questions? You should include some "additional flare" on this landing page, 
-  # such as an image. The key goal: Invite your audience to consider your project.
-  
-  h3("A Brief Overview"),
-  
-  p("Under Construction")
+introductory_page <- tabPanel(
+  "Introduction", 
+  titlePanel("Project Introduction: the Impact of Vaccines"),
+  HTML('<center><img src = "https://github.com/info-201a-wi22/final-project-starter-info/blob/9d960dbb4146f8b3dd06e2c8fc195ad3d427b521/Visualization%20for%20Intro.png" width = "500"></center>'),
+  p("Project Vax describes the impact of vaccinations on public health through datasets gathered from (datasets). 
+       The dataset(s) we are analyzing shows us the rate of vaccinations throughout the world and the mortality rate among 
+       those vaccinated and unvaccinated due to COVID-19. Our group was interested in exploring the effectiveness the COVID-19 
+       vaccines have on public health  whether the statistics support or oppose the use of the COVID-19 vaccines in the fight 
+       against the virus and its variants. The outbreak of the COVID-19 pandemic has greatly disrupted modern life for the past few years. 
+       These vaccines can be the key to normality in the near future."),
+  p("The dataset(s) we are analyzing shows us the rate of vaccinations across the United States and the infection/mortality rate among 
+    those vaccinated and unvaccinated due to COVID-19. Our group is interested in exploring the effectiveness of the COVID-19 vaccines 
+    and how the data either supports or opposes the current iterations of the COVID-19 vaccines in the fight against the virus and its variants. 
+    The outbreak of the Coronavirus vaccine has greatly disrupted modern life the past few years and these vaccines can be the key to normality within the near future.")
 )
-
 
 # ---------- REPORT PAGE ----------
 report_page <- tabPanel("Report",
