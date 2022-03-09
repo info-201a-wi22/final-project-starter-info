@@ -1,10 +1,10 @@
 # ------ DELETING LATER, PLEASE READ:
 # Note: pages are individually built starting with tabPanel() which will be combined 
 # into fluid UI page on the bottom, please keep format to avoid confusion. Load the
-# app to visualize (run the full app.R file & it should open). I'm also planning to 
-# separate out longer, non-coding paragraphs into a separate document (then calling 
-# them via variables) so that the files are cleaner & the code is easier to read. 
-# That file will be located in the docs folder as shiny_paragraphs.R
+# app to visualize (run the full app.R file & it should open). 
+
+# ALSO: PLEASE PUT LONGER PARAGRAPHS IN "shiny_paragraphs.R" FILE TO MAINTAIN CLEANLINESS
+# OF CODING THANKS
 
 # ---------- INTRODUCTORY PAGE ----------
 introductory_page <- tabPanel(
