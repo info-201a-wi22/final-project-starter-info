@@ -12,13 +12,22 @@
 # THANKS
 
 # please read ALL COMMENTS within code as well.
-library(pacman)
-
-p_load(
-  rsconnect, dplyr, ggplot2, shiny, reshape2, tidyverse,
-  data.table, mapdata, ggmap, maps, viridis, DT, plotly,
-  gganimate, gifski, shinycssloaders
-)
+library(rsconnect)
+library(dplyr)
+library(ggplot2)
+library(shiny)
+library(reshape2)
+library(tidyverse)
+library(data.table)
+library(mapdata)
+library(ggmap)
+library(maps)
+library(viridis)
+library(DT)
+library(plotly)
+library(gganimate)
+library(gifski)
+library(shinycssloaders)
 
 source("interactive_2.R")
 source("shiny_paragraphs.R")

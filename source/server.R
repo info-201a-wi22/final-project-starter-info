@@ -7,13 +7,22 @@
 # This is for functions only, all UI goes in ui.R file. (please see ui note)
 
 # TO RUN FULL APP, RUN ALL LINES IN "app.R" FILE.
-library(pacman)
-
-p_load(
-  rsconnect, dplyr, ggplot2, shiny, reshape2, tidyverse,
-  data.table, mapdata, ggmap, maps, viridis, DT, plotly,
-  gganimate, gifski, shinycssloaders
-)
+library(rsconnect)
+library(dplyr)
+library(ggplot2)
+library(shiny)
+library(reshape2)
+library(tidyverse)
+library(data.table)
+library(mapdata)
+library(ggmap)
+library(maps)
+library(viridis)
+library(DT)
+library(plotly)
+library(gganimate)
+library(gifski)
+library(shinycssloaders)
 
 source("interactive_2.R")
 source("Exploratory_Analysis_AggregatedTable.R")
