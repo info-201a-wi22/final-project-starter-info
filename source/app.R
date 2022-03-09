@@ -11,18 +11,9 @@ p_load(
   gganimate, gifski, shinycssloaders
 )
 
-source("interactive_2.R")
-source("Exploratory_Analysis_AggregatedTable.R")
-source("Exploratory_Analysis_FirstChart.R")
-source("Exploratory_Analysis_SecondChart.R")
-source("interactive_1.R")
-source("shiny_paragraphs.R")
-
-
-# source these last (or there will be errors):
 source("server.R")
 source("ui.R")
 
 shinyApp(ui = ui, server = server)
 
-rsconnect::deployApp("app.R")
+deployApp()

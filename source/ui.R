@@ -12,6 +12,16 @@
 # THANKS
 
 # please read ALL COMMENTS within code as well.
+library(pacman)
+
+p_load(
+  rsconnect, dplyr, ggplot2, shiny, reshape2, tidyverse,
+  data.table, mapdata, ggmap, maps, viridis, DT, plotly,
+  gganimate, gifski, shinycssloaders
+)
+
+source("interactive_2.R")
+source("shiny_paragraphs.R")
 
 # ---------- INTRODUCTORY PAGE ----------
 introductory_page <- tabPanel("Introduction", 
