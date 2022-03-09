@@ -94,9 +94,9 @@ plot_chart2_deaths <- ggplot(
   ggtitle("Death Counts Over Time") 
 
 ## animating with gganimate (run library code in app.R first):
-gif_chart2_cases <- 
+gif_chart2_deaths <- 
   animate(
-    plot_chart2_cases, 
+    plot_chart2_deaths, 
     fps = 5, 
     end_pause = 2
   )
