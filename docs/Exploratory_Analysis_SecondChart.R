@@ -36,7 +36,7 @@ plot_chart2_cases <- ggplot(
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   ggtitle("Case Counts Over Time") 
 
-## animating with gganimate:
+## animating with gganimate (run library code in app.R first):
 gif_chart2_cases <- 
   animate(
     plot_chart2_cases, 
@@ -77,7 +77,7 @@ plot_chart2_deaths <- ggplot(
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   ggtitle("Death Counts Over Time") 
 
-## animating with gganimate:
+## animating with gganimate (run library code in app.R first):
 gif_chart2_cases <- 
   animate(
     plot_chart2_cases, 
