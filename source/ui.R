@@ -75,26 +75,24 @@ summary_page <- tabPanel("Summary",
       p(summary_takeaways),
       p(summary_takeaways2),
       p(summary_takeaways3),
-    )
-  )
-)
+    ), 
     
     tabPanel("Analysis Chart 1",
-             fluidPage(
-               column(4, br(),
-                      selectInput("Select a Country",
-                                  choices = c("Select", dataset$country),
-                                  selected = "Select"
-                      )
-               ),
-               
-               mainPanel(
-                 withSpinner(plotlyOutput("analysis_1"), type = 5),
-                 br(),
-                 p("This chart represents the amount of fatalities that have occured during the pandemic"),
-               ) 
-             )
-    )
+     fluidPage(
+       column(4, br(),
+          selectInput("anch2_state", "Select a Country",
+            choices = c("Select", dataset$country),
+            selected = "Select"
+          )
+        ),
+       
+       mainPanel(
+         withSpinner(plotlyOutput("analysis_1"), type = 5),
+         br(),
+         p("This chart represents the amount of fatalities that have occured during the pandemic"),
+        ) 
+      )
+    ),
     
     tabPanel("Analysis Chart 2",
       fluidPage(
@@ -104,7 +102,7 @@ summary_page <- tabPanel("Summary",
             selected = "Select"
           )
         ),
-        
+       
         mainPanel(
           withSpinner(plotlyOutput("analysis_2"), type = 7),
           br(),
@@ -112,6 +110,8 @@ summary_page <- tabPanel("Summary",
         )
       )
     )
+  )
+)
 
 # ---------- INTERACTIVE PAGE 1 ----------
 interactive_page_1 <- tabPanel("Counting Cases",
