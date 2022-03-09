@@ -22,7 +22,7 @@ authors <- "Jayden Set, Emma Bacarra, Larry Nguyen"
 affilation <- "INFO-201: Technical Foundations of Informatics - The Information School - University of Washington"
 
 
-index.rmd_report <- "Our group’s topic of concern revolves around the COVID-19 and its relationship between vaccinated and unvaccinated people, and how vaccinations have a role to play
+index.rmd_report <- "Our group's topic of concern revolves around the COVID-19 and its relationship between vaccinated and unvaccinated people, and how vaccinations have a role to play
 in the mortality rate which has been surging since the pandemic has started. The concern among getting everyone vaccinated stems from the human values of mutual
 empathy and the love for your common man. We want everyone to stay healthy and alive. There is also the selfish concern of getting life back to normal, before the
 global pandemic and the restrictions that came with it. The goal of vaccines is to reach herd immunity. In order to protect those vulnerable and unable to be
@@ -37,7 +37,7 @@ contact in their jobs everyday, and are in even more danger if the individuals t
 Vax**  are the limitations of the existing data and its accuracy, the information can be biased to service political motivations that are promptly against
 vaccines. However, the benefits of our project heavily outweigh the harms. With the information present in **Project Vax**; national, state and local governments
 are better able to assess the situation of the global pandemic and enact policies and regulations accordingly. The hope is for representatives in the United
-States’ lowest vaccinated states to enact change as deaths from the virus are highest among low vaccinated states (NBCNews, 2022). This can also include the
+States' lowest vaccinated states to enact change as deaths from the virus are highest among low vaccinated states (NBCNews, 2022). This can also include the
 expansion of free or affordable COVID-19 vaccines that are made accessible to the general public."
 
 research_questions <- "Our teams questions:
@@ -62,8 +62,8 @@ influence the impact of coronavirus vaccinations on coronavirus mentality. Those
 who are looking to view datasets that could help them combat the virus, but this could also interest people who are trying to convince anti-vaxxers that
 vaccinations are helpful and the public who wants to see the positive effect that the vaccine has had."
 
-expected_implications <- "Our group expects that local, state, and federal policymakers will gain a greater understanding of the effectiveness of COVID-19 vaccines from our project “The
-Impact of Vaccines”. The goal of our project is to inspire those will the power and influence to change policy/ enact laws that will ensure their citizens have
+expected_implications <- "Our group expects that local, state, and federal policymakers will gain a greater understanding of the effectiveness of COVID-19 vaccines from our project, \"The
+Impact of Vaccines\". The goal of our project is to inspire those will the power and influence to change policy/ enact laws that will ensure their citizens have
 access to free or affordable vaccines in order to reach herd immunity (which is when a large portion of the population becomes immune to a disease, it makes the
 spread of the disease from one individual to another very unlikely. As a result, the whole community is protected). This can be done through utilizing the large
 size of government to acquire vaccines in bulk quantities at a low cost. Governments can also utilize data science to strategically move vaccines to cities and
@@ -109,10 +109,10 @@ Vaccines have definitely reduced the mortality rate of  COVID-19 and while our g
 this is due to the emergence of stronger more vaccine resistant variants of the virus such as the Delta and Omicron variants. As the amount of new deaths continues to rise,
 it does not seem to impact slowing growth of vaccinated individuals, especially in countries where vaccines are accessible and everyone who wants a vaccine has gotten one.
 While the limitations of our research prevent us understanding why the increase of new deaths due to the emergence of virus variants, 
-our group speculates as vaccines slowly become less effective due to more resistant variants, this only reinforces the belief among “anti-vaxxers” 
+our group speculates as vaccines slowly become less effective due to more resistant variants, this only reinforces the belief among anti-vaxxers
 that the vaccines are ineffective against the virus."
 
-discussion <- "The findings of “Project Vax” are truly important as it reinforces the message that researchers and public officials have been spreading; 
+discussion <- "The findings of Project Vax are truly important as it reinforces the message that researchers and public officials have been spreading; 
 that vaccines slow the spread of COVID-19 and reduce the mortality rate of the virus. Our group expects that our findings will be used as educational 
 tools to convince those hesitant or misinformed to get vaccinated. Although the current iteration of COVID-19 vaccines are waning in effectiveness due 
 to the rise of stronger variants, it does offer a higher level of protection than being unvaccinated and we expect repeat doses or improved vaccines 
@@ -127,7 +127,7 @@ to vaccination sites closer to their home."
 
 conclusion <- "In conclusion, our group found that vaccines are vital in overcoming the worldwide pandemic and return to a sense of normalcy.
 We found that the adoption of vaccines has dramatically decreased the mortality rate and is the most effective way to do so. 
-We hope that if there is any takeaway a viewer can walk away with, is that if they haven’t gotten vaccinated yet, they should go get it. 
+We hope that if there is any takeaway a viewer can walk away with, is that if they haven't gotten vaccinated yet, they should go get it. 
 Vaccinated individuals of all ages benefit from vaccines and you would too."
 
 # ---------- SUMMARY PAGE ----------

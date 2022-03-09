@@ -1,0 +1,14 @@
+name: source
+title:
+username:
+account: uw-ebacarra
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5818479
+bundleId: 5663803
+url: https://uw-ebacarra.shinyapps.io/source/
+when: 1646863935.47036
+lastSyncTime: 1646863935.47036
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: data_access.R|README.md
