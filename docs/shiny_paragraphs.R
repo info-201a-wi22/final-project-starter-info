@@ -34,6 +34,11 @@ are better able to assess the situation of the global pandemic and enact policie
 States’ lowest vaccinated states to enact change as deaths from the virus are highest among low vaccinated states (NBCNews, 2022). This can also include the
 expansion of free or affordable COVID-19 vaccines that are made accessible to the general public."
 
+research_questions <- "Our teams questions:
+- How much of an impact do vaccines create on public health in the U.S.?
+- Have vaccinations helped the mortality rate of COVID-19 go down?
+- Are a majority of the population in countries fully vaxxed?
+- As the amount of new deaths were rising, were more people willing to get vaccinated?"
 
 agg_table_report1 <- "     Our aggregate table is pulled from a dataset on Kaggle that combines three
 datasets, one of which is made by the World Health Organization. This table summarizes the changes
