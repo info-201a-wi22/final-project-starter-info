@@ -16,7 +16,23 @@ its variants. The outbreak of the Coronavirus vaccine has greatly disrupted mode
 years and these vaccines can be the key to normality within the near future."
 
 # ---------- REPORT PAGE ----------
-index.rmd_report <- "Substitute this with stuff from index.rmd"
+index.rmd_report <- "     Our group’s topic of concern revolves around the COVID-19 and its relationship between vaccinated and unvaccinated people, and how vaccinations have a role to play
+in the mortality rate which has been surging since the pandemic has started. The concern among getting everyone vaccinated stems from the human values of mutual
+empathy and the love for your common man. We want everyone to stay healthy and alive. There is also the selfish concern of getting life back to normal, before the
+global pandemic and the restrictions that came with it. The goal of vaccines is to reach herd immunity. In order to protect those vulnerable and unable to be
+vaccinated, we strive to get every abled body vaccinated. In order to protect those vulnerable and unable to be vaccinated, we strive to get every abled body
+vaccinated. The direct stakeholders, those who will directly interact with **Project Vax**, are political leaders and policymakers, whether local or federal, who
+can explain the effectiveness of vaccines. The indirect stakeholders are those who did not directly interact with the project firsthand but can feel the effects
+from those who did. Indirect stakeholders may include the general public who are subject to laws and regulations placed upon them by policy makers and government
+officials who have directly interacted with **Project Vax**. They may also include individuals who are at risk of contracting COVID-19 and unable to vaccinate
+themselves due to preexisting conditions or individuals who refuse to be vaccinated and are being educated by those who are.  Lastly, these may include essential
+workers who are subject to regulations that may require them to be vaccinated or risk losing their jobs. Essential workers are put at risk of exposure and close
+contact in their jobs everyday, and are in even more danger if the individuals they interact with are not doing their part to be cautious. The harms of **Project
+Vax**  are the limitations of the existing data and its accuracy, the information can be biased to service political motivations that are promptly against
+vaccines. However, the benefits of our project heavily outweigh the harms. With the information present in **Project Vax**; national, state and local governments
+are better able to assess the situation of the global pandemic and enact policies and regulations accordingly. The hope is for representatives in the United
+States’ lowest vaccinated states to enact change as deaths from the virus are highest among low vaccinated states (NBCNews, 2022). This can also include the
+expansion of free or affordable COVID-19 vaccines that are made accessible to the general public."
 
 
 agg_table_report1 <- "     Our aggregate table is pulled from a dataset on Kaggle that combines three
