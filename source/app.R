@@ -8,7 +8,7 @@ library(pacman)
 p_load(
   rsconnect, dplyr, ggplot2, shiny, reshape2, tidyverse,
   data.table, mapdata, ggmap, maps, viridis, DT, plotly,
-  gganimate, gifski
+  gganimate, gifski, shinycssloaders
 )
 
 source("interactive_2.R")

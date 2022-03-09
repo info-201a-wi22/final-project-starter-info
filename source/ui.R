@@ -86,7 +86,7 @@ summary_page <- tabPanel("Summary",
         ),
         
         mainPanel(
-          plotlyOutput("analysis_2"),
+          withSpinner(plotlyOutput("analysis_2"), type = 7),
           br(),
           p("Insert description here")
         )
@@ -113,16 +113,16 @@ interactive_page_1 <- tabPanel("Counting Cases",
       conditionalPanel(
         condition = "input.case_or_death === 'Cases'",
         fluidRow(
-          column(8, plotlyOutput("int1cases_int")),
-          column(4, imageOutput("int1cases_gif"))
+          column(8, withSpinner(plotlyOutput("int1cases_int"), type = 7)),
+          column(4, withSpinner(imageOutput("int1cases_gif"), type = 7))
         )
       ),
       
       conditionalPanel(
         condition = "input.case_or_death === 'Deaths'",
         fluidRow(
-          column(8, plotlyOutput("int1deaths_int")),
-          column(4, imageOutput("int1deaths_gif"))
+          column(8, withSpinner(plotlyOutput("int1deaths_int"), type = 7)),
+          column(4, withSpinner(imageOutput("int1deaths_gif"), type = 7))
         )
       )
     )
@@ -161,7 +161,7 @@ interactive_page_2 <- tabPanel("Getting Vaccinated",
     ),
     
     mainPanel(
-      plotlyOutput("genpop"),
+      withSpinner(plotlyOutput("genpop"), type= 7),
       br(),
       p(int2_description)
     )
