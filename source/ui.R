@@ -30,10 +30,12 @@ introductory_page <- tabPanel("Introduction",
 # ---------- REPORT PAGE ----------
 report_page <- tabPanel("Report",
                         
-  p(index.rmd_report),
-  br(),                      
+  p(index.rmd_report),                      
   p(research_questions),
-  br(),
+  p(data_set),                      
+  p(expected_implications),
+  br();                      
+                        
   # PLS FINISH INDEX TAB PANEL AND PUT PARAGRAPH UNDER VARIABLE index.rmd_report IN shiny_paragraphs.R FILE 
   # IF MORE THAN 1 PARAGRAPH IS NECESSARY, PUT EACH PARAGRAPH UNDER A VARIABLE-
   # SHINY DOES NOT AUTOMATICALLY ACCOUNT FOR LINE BREAKS
