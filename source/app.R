@@ -7,11 +7,11 @@ p_load(
 )
 
 # set working directory to "Source" folder
-source("interactive_1.R")
 source("interactive_2.R")
 source("../docs/Exploratory_Analysis_AggregatedTable.R")
 source("../docs/Exploratory_Analysis_FirstChart.R")
 source("../docs/Exploratory_Analysis_SecondChart.R")
+source("interactive_1.R")
 source("../docs/shiny_paragraphs.R")
 
 

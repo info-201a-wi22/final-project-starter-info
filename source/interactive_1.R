@@ -1,26 +1,3 @@
-# ------ DELETING LATER, PLEASE READ:
-# hi, checkout if you want to use this code- I had it for the second exploratory
-# analysis chart but I thought it's probably better suited for the first interactive
-# (i recommend running the library code in app.R before this file or you might get
-# a spam of png downloads in your local files)
-
-# feel free to use it & to make it more interactive- I guess j make it so the 
-# user can decide which states or group of lines are being plotted (cases or deaths)
-# & if they want the plotly line graph displayed or the gganimate
-
-# if you need help just shoot me a text! or I can just finish this off while you
-# work on something else, whatever works idrc
-
-# thanks! -E
-
-
-
-data_chart2 <- 
-  read.csv("https://data.cdc.gov/api/views/9mfq-cb36/rows.csv?accessType=DOWNLOAD") %>%
-  rename(date = submission_date) %>%
-  subset(select = -c(created_at, consent_cases, consent_deaths))
-data_chart2$date <- as.Date(data_chart2$date, "%m/%d/%Y")
-
 # ---- Comparing Cases ----
 ## creating dataframe:
 chart2_cases <-
