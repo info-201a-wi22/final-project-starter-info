@@ -38,6 +38,21 @@ doses administered, leaving them at 37th for highest increases in percent."
 
 
 # ---------- SUMMARY PAGE ----------
+summary_takeaways <- "As time has continued to pass while we are in the pandemic their are still many people 
+around the world who refuse to get vaccinated. Within our team, Project Vax, we wanted to look at 
+how vaccines have had an impact on public health and COVID-19 itself. We wanted to observe the benefits that the 
+vaccination has been able to bring to the table and how it has had a positive effect amongst the virus to help
+combat and constrain it from getting any worse than it once was."
+
+summary_takeaways2 <- "In the first chart we wanted to analyze the amount of fatalities that have occured since
+the pandemic had first officially started up until now. Looking at it you are able to analyze that one the vaccine
+had finally been released to the public that there was a major dip in new fatalities, it had only gone back up recently 
+with the new variants that have been coming."
+
+summary_takeaways3 <- "The second chart that was created highlights different aspects of vaccination statuses across the country.
+It includes the amount of single dosed, fully vaccinated, and boosted individuals ranging from a various amount of ages. The general
+trend that we were able to witness is that the more vaccinated people their are, the more it will be less likely to have a 
+new fatality caused by covid."
 
 
 # ---------- INTERACTIVE PAGE 1 ----------
