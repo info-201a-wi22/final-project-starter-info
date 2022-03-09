@@ -5,8 +5,8 @@
 # a spam of png downloads in your local files)
 
 # feel free to use it & to make it more interactive- I guess j make it so the 
-# user can decide which group of lines are being plotted (cases or deaths) & if
-# they want the plotly line graph displayed or the gganimate
+# user can decide which states or group of lines are being plotted (cases or deaths)
+# & if they want the plotly line graph displayed or the gganimate
 
 # if you need help just shoot me a text! or I can just finish this off while you
 # work on something else, whatever works idrc
