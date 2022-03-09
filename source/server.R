@@ -20,7 +20,13 @@ server <- function(input, output, session){
   
   # ---------- SUMMARY PAGE ----------
   # Analysis Chart 1:
-  
+  dataset %>%
+    filter(country == "United States of America") %>%
+    ggplot(aes(x = date, y = New_deaths, colour = country))+
+    geom_point(size = 5, alpha = 0.2)+
+    geom_line(size = 1)+
+    theme_minimal()+
+    labs(title = "COVID Fatalities in The US")
   
   # Analysis Chart 2:
   chart2_state_selector <- reactive({
