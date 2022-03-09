@@ -1,6 +1,5 @@
 # ---- Comparing Cases ----
-## creating dataframe:
-chart2_cases <-
+int1_cases <-
   data_chart2 %>%
   group_by(date) %>%
   summarize(
@@ -14,9 +13,8 @@ chart2_cases <-
     Census = value
   )
 
-## mapping plot:
-plot_chart2_cases <- ggplot(
-  chart2_cases,
+plot_int1_cases <- 
+  ggplot(int1_cases,
   aes(
     x = date,
     y = Census,
@@ -25,23 +23,26 @@ plot_chart2_cases <- ggplot(
   )
 ) + geom_line(size = 0.6) + 
   scale_color_manual(values = c("royalblue4", "orangered", "darkgoldenrod1")) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  ggtitle("Case Counts Over Time") 
+
+gif_int1_cases <-
+  ggplot(int1_cases,
+    aes(
+      x = date,
+      y = Census,
+      group = `Case Type`,
+      color = `Case Type`
+    )
+  ) + geom_line(size = 0.6) + 
+  scale_color_manual(values = c("royalblue4", "orangered", "darkgoldenrod1")) +
   transition_reveal(date) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   ggtitle("Case Counts Over Time") 
 
-## animating with gganimate (run library code in app.R first):
-gif_chart2_cases <- 
-  animate(
-    plot_chart2_cases, 
-    fps = 5, 
-    end_pause = 2
-  )
-
-
 
 # ---- Comparing Deaths ----
-## creating dataframe:
-chart2_deaths <- 
+int1_deaths <- 
   data_chart2 %>%
   group_by(date) %>%
   summarize(
@@ -55,25 +56,30 @@ chart2_deaths <-
     Census = value
   )
 
-## mapping plot:
-plot_chart2_deaths <- ggplot(
-  chart2_deaths,
-  aes(
-    x = date,
-    y = Census,
-    group = `Case Type`,
-    color = `Case Type`
-  )
-) + geom_line(size = 0.6) + 
+plot_int1_deaths <- 
+  ggplot(int1_deaths,
+         aes(
+           x = date,
+           y = Census,
+           group = `Case Type`,
+           color = `Case Type`
+         )
+  ) + geom_line(size = 0.6) + 
+  scale_color_manual(values = c("royalblue4", "orangered", "darkgoldenrod1")) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  ggtitle("Death Counts Over Time") 
+
+gif_int1_deaths <-
+  ggplot(int1_deaths,
+         aes(
+           x = date,
+           y = Census,
+           group = `Case Type`,
+           color = `Case Type`
+         )
+  ) + geom_line(size = 0.6) + 
   scale_color_manual(values = c("royalblue4", "orangered", "darkgoldenrod1")) +
   transition_reveal(date) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   ggtitle("Death Counts Over Time") 
 
-## animating with gganimate (run library code in app.R first):
-gif_chart2_deaths <- 
-  animate(
-    plot_chart2_deaths, 
-    fps = 5, 
-    end_pause = 2
-  )

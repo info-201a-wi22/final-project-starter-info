@@ -95,14 +95,45 @@ summary_page <- tabPanel("Summary",
 
 # ---------- INTERACTIVE PAGE 1 ----------
 interactive_page_1 <- tabPanel("Counting Cases",
-  
-  # let's compare regular count of covid cases &/or mortality rates here, I left
-  # a note in the interactive_1.R file for some guidance -Emma
-  
+
   h3("Cases/Deaths in the U.S."),
+  br(),
   
-  p("Under Construction")
-  
+  fluidPage(
+    column(4, 
+      selectInput("case_or_death", "COVID-19 Statistics",
+        choices = c("Select", "Cases", "Deaths"),
+        selected = "Select"
+      ),
+      
+      radioButtons("intorgif", "Choose display type",
+        choices = c("Interactive", "GIF"),
+        selected = "Interactive"
+      )
+    ),
+    
+    mainPanel(
+      conditionalPanel(
+        condition = "input.intorgif == 'Interactive' && input.case_or_death == 'Cases'",
+        plotlyOutput("int1cases_int")
+      ),
+      
+      conditionalPanel(
+        conditon = "input.intorgif == 'GIF' && input.case_or_death == 'Cases'",
+        plotOutput("int1cases_gif")
+      ),
+      
+      conditionalPanel(
+        condition = "input.intorgif == 'Interactive' && input.case_or_death == 'Deaths'",
+        plotlyOutput("int1deaths_int")
+      ),
+      
+      conditionalPanel(
+        condition = "input.intorgif == 'GIF' && input.case_or_death == 'Deaths'",
+        plotOutput("gif_int1_deaths")
+      )
+    )
+  )
   
 )
 

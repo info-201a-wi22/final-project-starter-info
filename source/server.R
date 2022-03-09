@@ -44,12 +44,31 @@ server <- function(input, output, session){
         "royalblue4", "orangered", "darkgoldenrod1", 
         "chartreuse4", "deeppink1"
         )
-      ) + ggtitle(paste(input$anch2_state, "State COVID-19 Statistics")) +
+      ) + ggtitle(paste(input$anch2_state, "COVID-19 Statistics")) +
       theme(axis.text.x = element_text(angle = 45, hjust = 1))
   })
   
   
   # ---------- INTERACTIVE PAGE 1 ----------
+  detect_selector_casedeath <- reactive({
+    validate(need(input$case_or_death != "Select", "Please select a statistic."))
+  })
+  
+  output$int1cases_int <- renderPlotly({
+    plot_int1_cases
+  })
+  
+  output$int1cases_gif <- renderPlot({
+    gif_int1_cases
+  })
+  
+  output$int1deaths_int <- renderPlotly({
+    plot_int1_deaths
+  })
+  
+  output$int1deaths_gif <- renderPlot({
+    gif_int1_deaths
+  })
   
   
   # ---------- INTERACTIVE PAGE 2 ----------
