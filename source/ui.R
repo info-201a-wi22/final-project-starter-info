@@ -58,9 +58,21 @@ summary_page <- tabPanel("Summary",
   
   # put exploratory analysis charts
 
-  h3("Major Takeaways"),
+  h3("Major Takeaways"), br(),
   
-  p("Under Construction")
+  tabsetPanel(
+    tabPanel("Takeaways",
+      
+    ),
+    
+    tabPanel("Analysis Chart 1",
+      
+    ),
+    
+    tabPanel("Analysis Chart 2",
+      
+    )
+  )
 )
 
 
