@@ -4,7 +4,8 @@
 # app to visualize (run the full app.R file & it should open). 
 
 # ALSO: PLEASE PUT LONGER PARAGRAPHS IN "shiny_paragraphs.R" FILE TO MAINTAIN CLEANLINESS
-# OF CODING THANKS
+# OF CODING 
+# THANKS
 
 # ---------- INTRODUCTORY PAGE ----------
 introductory_page <- tabPanel(

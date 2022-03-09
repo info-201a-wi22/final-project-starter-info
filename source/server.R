@@ -1,5 +1,7 @@
 # ------ DELETING LATER, PLEASE READ:
-# This is for functions only, all UI goes in ui.R file.
+# This is for functions only, all UI goes in ui.R file. (please see ui note)
+
+# TO RUN FULL APP, RUN ALL LINES IN "app.R" FILE.
 
 server <- function(input, output, session){
   # ---------- INTRODUCTORY PAGE ----------
