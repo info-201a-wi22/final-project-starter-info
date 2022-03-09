@@ -29,11 +29,17 @@ introductory_page <- tabPanel("Introduction",
 
 # ---------- REPORT PAGE ----------
 report_page <- tabPanel("Report",
- 
+  h3("The Impact of Vaccines"),
+  br(),                     
   # PLS FINISH INDEX TAB PANEL AND PUT PARAGRAPH UNDER VARIABLE index.rmd_report IN shiny_paragraphs.R FILE 
   # IF MORE THAN 1 PARAGRAPH IS NECESSARY, PUT EACH PARAGRAPH UNDER A VARIABLE-
   # SHINY DOES NOT AUTOMATICALLY ACCOUNT FOR LINE BREAKS
-  
+  p(date), br(),
+  p(authors), br(),
+  p(affiliation), br(),                      
+  br(),
+                        
+                        
   h3("Our Process"), br(),
   
   tabsetPanel(
