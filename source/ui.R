@@ -66,7 +66,7 @@ summary_page <- tabPanel("Summary",
     ),
     
     tabPanel("Analysis Chart 1",
-      
+      # jayden, check the rubric for p02 - samuel left some comments
     ),
     
     tabPanel("Analysis Chart 2",
