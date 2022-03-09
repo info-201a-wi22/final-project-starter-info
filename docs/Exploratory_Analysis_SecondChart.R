@@ -95,16 +95,21 @@ gif_chart2_deaths <-
 
 data_state_grid <- 
   semi_join(data_chart2, state_coords, by = "State") %>%
-  group_by(date) %>%
+  group_by(State) %>%
   summarize(
-    `Total Cases` = sum(tot_cases, na.rm = TRUE),
-    `Confirmed Cases` = sum(conf_cases, na.rm = TRUE),
-    `New Cases` = sum(new_case, na.rm = TRUE),
-    `Total Deaths` = sum(tot_death, na.rm = TRUE),
-    `Confirmed Deaths` = sum(conf_death, na.rm = TRUE),
-    `New Deaths` = sum(new_death, na.rm = TRUE)
+    `Total Cases` = tot_cases,
+    `Confirmed Cases` = conf_cases,
+    `New Cases` = new_case,
+    `Total Deaths` = tot_death,
+    `Confirmed Deaths` = conf_death,
+    `New Deaths` = new_death
   ) %>%
-  reshape2::melt(id = c("date", "State"))
+  reshape2::melt(id = c("date", "State")) 
+data_state_grid <-
+  rename(
+    `Case Type` = variable,
+    Census = value
+  )
 View(data_state_grid)
 
 

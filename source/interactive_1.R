@@ -1,4 +1,4 @@
-
+# ------ DELETING LATER, PLEASE READ:
 # hi, checkout if you want to use this code- I had it for the second exploratory
 # analysis chart but I thought it's probably better suited for the first interactive
 # (i recommend running the library code in app.R before this file or you might get
