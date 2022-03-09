@@ -14,8 +14,38 @@ server <- function(input, output, session){
   
   
   # ---------- SUMMARY PAGE ----------
-  output$analysis_2 <- renderPlotly({
+  chart2_state_selector <- reactive({
+    validate(need(input$anch2_state != "Select", "Please select a state."))
     
+    data_chart2 %>%
+      filter(state == input$anch2_state) %>%
+      summarize(
+        date,
+        `New Cases` = new_case,
+        `New Deaths` = new_death
+      ) %>%
+      reshape2::melt(id = "date") %>%
+      rename(
+        `Case Type` = variable,
+        Census = value
+      )  
+  })
+  
+  output$analysis_2 <- renderPlotly({
+    ggplot(chart2_state_selector(),
+           aes(
+             x = date,
+             y = Census,
+             group = `Case Type`,
+             color = `Case Type`
+           )
+    ) + geom_line(size = 0.6) + 
+      scale_color_manual(values = c(
+        "royalblue4", "orangered", "darkgoldenrod1", 
+        "chartreuse4", "deeppink1"
+        )
+      ) + ggtitle(paste(input$anch2_state, "State COVID-19 Statistics")) +
+      theme(axis.text.x = element_text(angle = 45, hjust = 1))
   })
   
   

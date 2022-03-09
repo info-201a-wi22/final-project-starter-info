@@ -1,4 +1,4 @@
-# ------ DELETING LATER, PLEASE READ:
+# ------ DELETING LATER, PLEASE READ ALL:
 # Note: pages are individually built starting with tabPanel() which will be combined 
 # into fluid UI page on the bottom, please keep format to avoid confusion. Load the
 # app to visualize (run the full app.R file & it should open). 
@@ -7,7 +7,7 @@
 # OF CODING 
 # THANKS
 
-# PLEASE READ ALL COMMENTS WITHIN CODE AS WELL.
+# please read ALL COMMENTS within code as well.
 
 # ---------- INTRODUCTORY PAGE ----------
 introductory_page <- tabPanel(
@@ -28,16 +28,17 @@ introductory_page <- tabPanel(
 
 # ---------- REPORT PAGE ----------
 report_page <- tabPanel("Report",
-  # Report page.  Iterate on your P01 and P02 to present your final report. See below.  
-  # The key goal: Write a concise, clear, and interesting summary of your project. 
   
-  # Put 1 page each for index.rmd file & aggregate table
+  # PLS FINISH INDEX TAB PANEL AND PUT PARAGRAPH UNDER VARIABLE index.rmd_report
+  # IN shiny_paragraphs.R FILE 
+  # IF MORE THAN 1 PARAGRAPH IS NECESSARY, PUT EACH PARAGRAPH UNDER A VARIABLE,
+  # SHINY DOES NOT AUTOMATICALLY ACCOUNT FOR LINE BREAKS
   
   h3("Our Process"), br(),
   
   tabsetPanel(
     tabPanel("Index", br(), br(),
-      p(index.rmd_report) # pls write this paragraph, I just created the variable
+      p(index.rmd_report) 
     ),
     
     tabPanel("Aggregate Table", br(), br(),
@@ -58,12 +59,8 @@ report_page <- tabPanel("Report",
 
 # ---------- SUMMARY PAGE ----------
 summary_page <- tabPanel("Summary",
-  # Summary takeaways, a page that hones in on at least 3 major takeaways from the 
-  # project (which should be related to a specific aspect of your analysis). Feel free 
-  # to incorporate tables, graphics, or other elements to convey these conclusions. 
-  # The key goal: Present the key takeaways for your audience.
   
-  # put exploratory analysis charts
+  # FINISH CHARTS TABPANELS & MAIN TAKEAWAYS TABPANEL
 
   h3("Major Takeaways"), br(),
   
@@ -77,7 +74,20 @@ summary_page <- tabPanel("Summary",
     ),
     
     tabPanel("Analysis Chart 2",
-      
+      fluidPage(
+        column(4,
+          selectInput("anch2_state", "Select a State",
+            choices = c("Select", unique(data_chart2$state)),
+            selected = "Select"
+          )
+        ),
+        
+        mainPanel(
+          plotlyOutput("analysis_2"),
+          br(),
+          p()
+        )
+      )
     )
   )
 )
