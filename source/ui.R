@@ -7,6 +7,8 @@
 # OF CODING 
 # THANKS
 
+# PLEASE READ ALL COMMENTS WITHIN CODE AS WELL.
+
 # ---------- INTRODUCTORY PAGE ----------
 introductory_page <- tabPanel(
   "Introduction", 
@@ -29,7 +31,7 @@ report_page <- tabPanel("Report",
   # Report page.  Iterate on your P01 and P02 to present your final report. See below.  
   # The key goal: Write a concise, clear, and interesting summary of your project. 
   
-  # Put index.rmd file & aggregate table
+  # Put 1 page each for index.rmd file & aggregate table
   
   h3("Our Process"), br(),
   
