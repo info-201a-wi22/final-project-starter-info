@@ -16,7 +16,7 @@ its variants. The outbreak of the Coronavirus vaccine has greatly disrupted mode
 years and these vaccines can be the key to normality within the near future."
 
 # ---------- REPORT PAGE ----------
-index.rmd_report <- "     Our group’s topic of concern revolves around the COVID-19 and its relationship between vaccinated and unvaccinated people, and how vaccinations have a role to play
+index.rmd_report <- "Our group’s topic of concern revolves around the COVID-19 and its relationship between vaccinated and unvaccinated people, and how vaccinations have a role to play
 in the mortality rate which has been surging since the pandemic has started. The concern among getting everyone vaccinated stems from the human values of mutual
 empathy and the love for your common man. We want everyone to stay healthy and alive. There is also the selfish concern of getting life back to normal, before the
 global pandemic and the restrictions that came with it. The goal of vaccines is to reach herd immunity. In order to protect those vulnerable and unable to be
