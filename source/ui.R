@@ -88,22 +88,15 @@ summary_page <- tabPanel("Summary",
     
     tabPanel("Analysis Chart 2",
       fluidPage(
-        column(4, br(),
-          selectInput("anch2_state", "Select a State",
-            choices = c("Select", unique(data_chart2$state)),
-            selected = "Select"
-          )
-        ),
-       
-        mainPanel(
-          withSpinner(plotlyOutput("analysis_2"), type = 7),
-          br(),
-          p("Insert description here")
-        )
+        br(),
+        withSpinner(plotlyOutput("analysis_2"), type = 7),
+        br(),
+        p("Insert description here")
       )
     )
   )
 )
+
 
 # ---------- INTERACTIVE PAGE 1 ----------
 interactive_page_1 <- tabPanel("Counting Cases",

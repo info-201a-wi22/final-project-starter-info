@@ -4,6 +4,7 @@ data_chart2 <-
   rename(date = submission_date) %>%
   subset(select = -c(created_at, consent_cases, consent_deaths))
 data_chart2$date <- as.Date(data_chart2$date, "%m/%d/%Y")
+View(data_chart2)
 
 test_data_chart2 <- 
   data_chart2 %>%
