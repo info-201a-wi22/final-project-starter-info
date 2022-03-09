@@ -5,8 +5,8 @@ dataset <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-proj
 
 dataset %>%
   filter(country == "United States of America") %>%
-  ggplot(aes(x = date, y = total_vaccinations, colour = country))+
+  ggplot(aes(x = date, y = New_deaths, colour = country))+
   geom_point(size = 5, alpha = 0.2)+
   geom_line(size = 1)+
   theme_minimal()+
-  labs(title = "Progession of Vaccinations in the US")
+  labs(title = "COVID Fatalities in The US")
