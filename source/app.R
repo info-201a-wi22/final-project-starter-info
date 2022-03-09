@@ -3,7 +3,7 @@ library(pacman) # <- for loading multiple libraries at once
 p_load(
   rsconnect, dplyr, ggplot2, shiny, reshape2, tidyverse,
   data.table, mapdata, ggmap, maps, viridis, DT, plotly,
-  readxl
+  gganimate, gifski
 )
 
 # set working directory to source folder
