@@ -40,6 +40,31 @@ research_questions <- "Our teams questions:
 - Are a majority of the population in countries fully vaxxed?
 - As the amount of new deaths were rising, were more people willing to get vaccinated?"
 
+data_set <- "The dataset we have chosen to use for our project _The Impact of Vaccines_, compares the [covid-19 vaccination rate vs the mortality rate across the world]
+(https://www.kaggle.com/sinakaraji/covid-vaccination-vs-death). This set of data has 15,803 views, 2,758 downloads, and 34 contributors. The top contributing
+countries are South Korea, China, Iran, and Russia. It observes the outbreak that we have all witnessed and looks at the positives around the vaccination that has
+surfaced. The reason why this dataset was generated was to investigate the impact of the coronavirus vaccine on the covid-19 mortality. This data file exceeds the
+amount of 200 observations and is a combination of a total of 3 different datasets which are sourced from Kaggle and the World Health Organization. It represents a
+majority of each country around the world and keeps track of their total vaccinations, number of people vaccinated, people fully vaccinated, new deaths per day,
+the population count, and the ratio of vaccinated individuals per available vaccinations. The majority of countries had a ratio of 0 -  6.11. The most common
+country to appear in this data set is the United States. The data was collected by Sina Karaji and it was updated last about a month ago meaning that it is up to
+date. The expected updated frequency of this dataset is every month. The reason why he created the dataset was because he noticed how many deaths have been caused
+since the outbreak of the coronavirus, so he wanted to look at the impact that the vaccination has had and how it has contributed to the progress beside global
+death counts. The author is also motivated to provide this information because of anti-vaccine groups that form even though vaccines have been proven to have many
+benefits. By doing this he is able to show people the positive impact of the vaccination, persuade the rest of the world to get vaccinated, and positively
+influence the impact of coronavirus vaccinations on coronavirus mentality. Those who are likely to be benefited from the data could be companies such as the CDC
+who are looking to view datasets that could help them combat the virus, but this could also interest people who are trying to convince anti-vaxxers that
+vaccinations are helpful and the public who wants to see the positive effect that the vaccine has had."
+
+expected_implications <- "Our group expects that local, state, and federal policymakers will gain a greater understanding of the effectiveness of COVID-19 vaccines from our project “The
+Impact of Vaccines”. The goal of our project is to inspire those will the power and influence to change policy/ enact laws that will ensure their citizens have
+access to free or affordable vaccines in order to reach herd immunity (which is when a large portion of the population becomes immune to a disease, it makes the
+spread of the disease from one individual to another very unlikely. As a result, the whole community is protected). This can be done through utilizing the large
+size of government to acquire vaccines in bulk quantities at a low cost. Governments can also utilize data science to strategically move vaccines to cities and
+states where demand and need are greatest. Not only do vaccines have to be financially accessible to everyone but it should be easy to find a vaccination site
+locally and schedule an appointment with ease. We also expect **Project Vax** will be used as an educational tool to convince those who are resistant to receiving
+a vaccine or those who do not believe in the effectiveness of vaccines."
+
 agg_table_report1 <- "     Our aggregate table is pulled from a dataset on Kaggle that combines three
 datasets, one of which is made by the World Health Organization. This table summarizes the changes
 in statistical numbers during COVID-19 in each country, filering out rows of data from the first
