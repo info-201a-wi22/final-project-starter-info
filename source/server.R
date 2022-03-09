@@ -1,5 +1,10 @@
 server <- function(input, output, session){
   # ---------- INTRODUCTORY PAGE ----------
+  intro_view <- tabPanel(
+    "Introduction", 
+    titlePanel("Project Introduction: the Impact of Vaccines"),
+    HTML('<center><img src = "file:///Users/jset/Desktop/Screen%20Shot%202022-03-08%20at%209.35.24%20PM.png')
+  )
   
   
   # ---------- REPORT PAGE ----------
