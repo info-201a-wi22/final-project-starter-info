@@ -30,7 +30,7 @@ report_page <- tabPanel("Report",
   
   tabsetPanel(
     tabPanel("Index", br(), br(),
-      p(index.rmd_report) # please add to this, I just created the variable
+      p(index.rmd_report) # pls write this paragraph, I just created the variable
     ),
     
     tabPanel("Aggregate Table", br(), br(),
@@ -58,9 +58,21 @@ summary_page <- tabPanel("Summary",
   
   # put exploratory analysis charts
 
-  h3("Major Takeaways"),
+  h3("Major Takeaways"), br(),
   
-  p("Under Construction")
+  tabsetPanel(
+    tabPanel("Takeaways",
+      
+    ),
+    
+    tabPanel("Analysis Chart 1",
+      # jayden, check the rubric for p02 - samuel left some comments
+    ),
+    
+    tabPanel("Analysis Chart 2",
+      
+    )
+  )
 )
 
 
