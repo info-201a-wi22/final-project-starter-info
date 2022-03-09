@@ -95,6 +95,34 @@ experienced the third lowest changes in death, decreasing by 1,025 individuals. 
 percentage of individuals that are vaccinated in the population, the U.S. was able to get 72% more 
 doses administered, leaving them at 37th for highest increases in percent."
 
+findings <- "After a deep analysis of our data, our group has found that vaccines really do have an impact on public health,
+not just in the United States but all across the world. We found that countries that have the greatest number of newly vaccinated
+individuals proportionate to their populations saw an overall decrease in deaths. After the introduction of vaccines to a population,
+we were able to see a sharp decline in deaths in countless countries.
+Vaccines have definitely reduced the mortality rate of  COVID-19 and while our group recognises the recent spikes in covid cases and deaths,
+this is due to the emergence of stronger more vaccine resistant variants of the virus such as the Delta and Omicron variants. As the amount of new deaths continues to rise,
+it does not seem to impact slowing growth of vaccinated individuals, especially in countries where vaccines are accessible and everyone who wants a vaccine has gotten one.
+While the limitations of our research prevent us understanding why the increase of new deaths due to the emergence of virus variants, 
+our group speculates as vaccines slowly become less effective due to more resistant variants, this only reinforces the belief among “anti-vaxxers” 
+that the vaccines are ineffective against the virus."
+
+discussion <- "The findings of “Project Vax” are truly important as it reinforces the message that researchers and public officials have been spreading; 
+that vaccines slow the spread of COVID-19 and reduce the mortality rate of the virus. Our group expects that our findings will be used as educational 
+tools to convince those hesitant or misinformed to get vaccinated. Although the current iteration of COVID-19 vaccines are waning in effectiveness due 
+to the rise of stronger variants, it does offer a higher level of protection than being unvaccinated and we expect repeat doses or improved vaccines 
+to combat this issue. We are seeing this right now as a third vaccine dose is becoming more commonplace and recommended to all ages. We expect our 
+interactive chart can be transferred to different mediums and become plaster across public forums and across the web. Our goal by doing this is to 
+expose more and more people to the findings made by our group and incentivize them to get a vaccine with the benefits of a lower mortality rate 
+and lower infection rate. We also expect our findings to be used by governments as justification to invest further into their vaccination programs. 
+Increased spending into vaccination programs means more vaccines overall for a population which can be acquired in larger quantities for lower prices. 
+These lower prices can be passed on to citizens which just removes another roadblock in getting vaccinated. We can also see the expansion of existing 
+vaccination sites to accommodate larger populations and the construction of new sites all over the country allowing more and more people access 
+to vaccination sites closer to their home."
+
+conclusion <- "In conclusion, our group found that vaccines are vital in overcoming the worldwide pandemic and return to a sense of normalcy.
+We found that the adoption of vaccines has dramatically decreased the mortality rate and is the most effective way to do so. 
+We hope that if there is any takeaway a viewer can walk away with, is that if they haven’t gotten vaccinated yet, they should go get it. 
+Vaccinated individuals of all ages benefit from vaccines and you would too."
 
 # ---------- SUMMARY PAGE ----------
 summary_takeaways <- "As time has continued to pass while we are in the pandemic their are still many people 
