@@ -1,24 +1,9 @@
-# TO RUN SHINY APP, DO THESE STEPS FIRST:
-# 1) set working directory to the "Source" folder
-# 2) install.packages("pacman") (if you don't have it installed already)
-# 3) run all lines of code in "app.R" file
+library(pacman)
 
-library(rsconnect)
-library(dplyr)
-library(ggplot2)
-library(shiny)
-library(reshape2)
-library(tidyverse)
-library(data.table)
-library(mapdata)
-library(ggmap)
-library(maps)
-library(viridis)
-library(DT)
-library(plotly)
-library(gganimate)
-library(gifski)
-library(shinycssloaders)
+p_load(
+  rsconnect, dplyr, ggplot2, shiny, reshape2, tidyverse, data.table, mapdata,
+  ggmap, maps, viridis, DT, plotly, gganimate, gifski, shinycssloaders
+)
 
 source("interactive_2.R")
 source("Exploratory_Analysis_AggregatedTable.R")

@@ -1,36 +1,3 @@
-# TO RUN SHINY APP, DO THESE STEPS FIRST:
-# 1) set working directory to the "Source" folder
-# 2) install.packages("pacman") (if you don't have it installed already)
-# 3) run all lines of code in "app.R" file
-
-# ------ DELETING LATER, PLEASE READ ALL:
-# Note: pages are individually built starting with tabPanel() which will be combined 
-# into fluid UI page on the bottom, please keep format to avoid confusion. Load the
-# app to visualize (run the full app.R file & it should open). 
-
-# PLEASE PUT LONGER PARAGRAPHS IN "shiny_paragraphs.R" FILE TO MAINTAIN CLEANLINESS OF CODING 
-# THANKS
-
-# please read ALL COMMENTS within code as well.
-library(rsconnect)
-library(dplyr)
-library(ggplot2)
-library(shiny)
-library(reshape2)
-library(tidyverse)
-library(data.table)
-library(mapdata)
-library(ggmap)
-library(maps)
-library(viridis)
-library(DT)
-library(plotly)
-library(gganimate)
-library(gifski)
-library(shinycssloaders)
-
-
-
 # ---------- INTRODUCTORY PAGE ----------
 introductory_page <- tabPanel("Introduction", 
 
@@ -49,9 +16,7 @@ introductory_page <- tabPanel("Introduction",
 report_page <- tabPanel("Report",
   h3("The Impact of Vaccines"),
   br(),                     
-  # PLS FINISH INDEX TAB PANEL AND PUT PARAGRAPH UNDER VARIABLE index.rmd_report IN shiny_paragraphs.R FILE 
-  # IF MORE THAN 1 PARAGRAPH IS NECESSARY, PUT EACH PARAGRAPH UNDER A VARIABLE-
-  # SHINY DOES NOT AUTOMATICALLY ACCOUNT FOR LINE BREAKS
+  
   p(date), br(),
   p(authors), br(),
   p(affiliation), br(),                      
@@ -92,8 +57,6 @@ report_page <- tabPanel("Report",
 # ---------- SUMMARY PAGE ----------
 summary_page <- tabPanel("Summary",
   
-  # FINISH CHARTS TABPANELS & MAIN TAKEAWAYS TABPANEL
-
   h3("Major Takeaways"), br(),
   
   tabsetPanel(
