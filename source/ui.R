@@ -29,8 +29,7 @@ library(gganimate)
 library(gifski)
 library(shinycssloaders)
 
-source("interactive_2.R")
-source("shiny_paragraphs.R")
+
 
 # ---------- INTRODUCTORY PAGE ----------
 introductory_page <- tabPanel("Introduction", 

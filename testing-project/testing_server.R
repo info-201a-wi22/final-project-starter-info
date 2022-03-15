@@ -1,32 +1,4 @@
-# TO RUN SHINY APP, DO THESE STEPS FIRST:
-# 1) set working directory to the "Source" folder
-# 2) install.packages("pacman") (if you don't have it installed already)
-# 3) run all lines of code in "app.R" file
-
-# ------ DELETING LATER, PLEASE READ:
-# This is for functions only, all UI goes in ui.R file. (please see ui note)
-
-# TO RUN FULL APP, RUN ALL LINES IN "app.R" FILE.
-library(rsconnect)
-library(dplyr)
-library(ggplot2)
-library(shiny)
-library(reshape2)
-library(tidyverse)
-library(data.table)
-library(mapdata)
-library(ggmap)
-library(maps)
-library(viridis)
-library(DT)
-library(plotly)
-library(gganimate)
-library(gifski)
-library(shinycssloaders)
-
-
-
-server <- function(input, output, session){
+server <- function(input, output, session) {
   # ---------- INTRODUCTORY PAGE ----------
   
   
@@ -53,14 +25,14 @@ server <- function(input, output, session){
         Doses = variable,
         Count = value
       ) %>%
-    ggplot(
-      aes(
-        x = Date,
-        y = Count,
-        group = Doses,
-        color = Doses
-      )
-    ) + geom_line(size = 0.6) + 
+      ggplot(
+        aes(
+          x = Date,
+          y = Count,
+          group = Doses,
+          color = Doses
+        )
+      ) + geom_line(size = 0.6) + 
       scale_color_manual(values = c("royalblue4", "orangered")) + 
       ggtitle(paste("COVID-19 Vaccine Distribution Statistics"))
   })
@@ -119,3 +91,4 @@ server <- function(input, output, session){
       ggtitle(paste(input$vax_status_selector, "Population For", input$date_selector))
   })
 }
+

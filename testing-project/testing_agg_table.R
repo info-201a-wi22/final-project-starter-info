@@ -10,7 +10,7 @@ earlycountries <-
     total_vaccinations,
     New_deaths,
     ratio
-    ) %>%
+  ) %>%
   rename(early_date = date)
 
 latecountries <- 
@@ -33,7 +33,7 @@ compare_agg_table <-
     ratio_diff = ratio.x - ratio.y,
     vax_change = total_vaccinations.x - total_vaccinations.y,
     death_change = New_deaths.x - New_deaths.y
-    ) %>%
+  ) %>%
   select(
     country,
     early_date,
@@ -42,7 +42,7 @@ compare_agg_table <-
     vax_change,
     death_change,
     ratio_diff
-    )
+  )
 
 us_info <- compare_agg_table[(compare_agg_table$country == "United States of America"), ]
 us_info

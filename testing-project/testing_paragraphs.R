@@ -1,4 +1,3 @@
-
 # ---------- INTRODUCTORY PAGE ----------
 introductionp1 <- "Project Vax describes the impact of vaccinations on public health through datasets 
 gathered from (datasets). The datasets we are analyzing shows us the rate of vaccinations throughout 
@@ -15,13 +14,8 @@ supports or opposes the current iterations of the COVID-19 vaccines in the fight
 its variants. The outbreak of the Coronavirus vaccine has greatly disrupted modern life the past few 
 years and these vaccines can be the key to normality within the near future."
 
+
 # ---------- REPORT PAGE ----------
-
-authors <- "Jayden Set, Emma Bacarra, Larry Nguyen"
-
-affiliation <- "INFO-201: Technical Foundations of Informatics - The Information School - University of Washington"
-
-
 index.rmd_report <- "Our group's topic of concern revolves around the COVID-19 and its relationship between vaccinated and unvaccinated people, and how vaccinations have a role to play
 in the mortality rate which has been surging since the pandemic has started. The concern among getting everyone vaccinated stems from the human values of mutual
 empathy and the love for your common man. We want everyone to stay healthy and alive. There is also the selfish concern of getting life back to normal, before the
@@ -62,7 +56,7 @@ influence the impact of coronavirus vaccinations on coronavirus mentality. Those
 who are looking to view datasets that could help them combat the virus, but this could also interest people who are trying to convince anti-vaxxers that
 vaccinations are helpful and the public who wants to see the positive effect that the vaccine has had."
 
-expected_implications <- "Our group expects that local, state, and federal policymakers will gain a greater understanding of the effectiveness of COVID-19 vaccines from our project, \"The
+expected_implications <- "Our group expects that local, state, and federal policymakers will gain a greater understanding of the effectiveness of COVID-19 vaccines from our project \"The
 Impact of Vaccines\". The goal of our project is to inspire those will the power and influence to change policy/ enact laws that will ensure their citizens have
 access to free or affordable vaccines in order to reach herd immunity (which is when a large portion of the population becomes immune to a disease, it makes the
 spread of the disease from one individual to another very unlikely. As a result, the whole community is protected). This can be done through utilizing the large
@@ -109,10 +103,10 @@ Vaccines have definitely reduced the mortality rate of  COVID-19 and while our g
 this is due to the emergence of stronger more vaccine resistant variants of the virus such as the Delta and Omicron variants. As the amount of new deaths continues to rise,
 it does not seem to impact slowing growth of vaccinated individuals, especially in countries where vaccines are accessible and everyone who wants a vaccine has gotten one.
 While the limitations of our research prevent us understanding why the increase of new deaths due to the emergence of virus variants, 
-our group speculates as vaccines slowly become less effective due to more resistant variants, this only reinforces the belief among anti-vaxxers
+our group speculates as vaccines slowly become less effective due to more resistant variants, this only reinforces the belief among anti-vaxxers.
 that the vaccines are ineffective against the virus."
 
-discussion <- "The findings of Project Vax are truly important as it reinforces the message that researchers and public officials have been spreading; 
+discussion <- "The findings of \"Project Vax\" are truly important as it reinforces the message that researchers and public officials have been spreading; 
 that vaccines slow the spread of COVID-19 and reduce the mortality rate of the virus. Our group expects that our findings will be used as educational 
 tools to convince those hesitant or misinformed to get vaccinated. Although the current iteration of COVID-19 vaccines are waning in effectiveness due 
 to the rise of stronger variants, it does offer a higher level of protection than being unvaccinated and we expect repeat doses or improved vaccines 
@@ -129,6 +123,7 @@ conclusion <- "In conclusion, our group found that vaccines are vital in overcom
 We found that the adoption of vaccines has dramatically decreased the mortality rate and is the most effective way to do so. 
 We hope that if there is any takeaway a viewer can walk away with, is that if they haven't gotten vaccinated yet, they should go get it. 
 Vaccinated individuals of all ages benefit from vaccines and you would too."
+
 
 # ---------- SUMMARY PAGE ----------
 summary_takeaways <- "As time has continued to pass while we are in the pandemic their are still many people 
@@ -149,9 +144,6 @@ while the amount administered is the total number of doses recieved by a patient
 of fatalities in the first chart goes down."
 
 
-# ---------- INTERACTIVE PAGE 1 ----------
-
-
 # ---------- INTERACTIVE PAGE 2 ----------
 int2_helptext <- "Explore numbers of the general population in the U.S. Here, you can check numbers
 of various vaccination statuses, such as \"Single Dosed\", \"Fully Vaccinated\", and \"Boosted\". 
@@ -168,5 +160,3 @@ facilities, dialysis centers, Federal Emergency Management Agency and Health Res
 Services Administration partner sites, and federal entity facilities\" (via CDC website). The 
 specific columns selected for this analysis are based on the jurisdiction (state) where recipients 
 live."
-
-
